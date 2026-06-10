@@ -13,6 +13,28 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,400..600&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../assets/eguzki.css">
+<style>
+.bk-cal{background:var(--cream,#f6f1e7);border:1px solid var(--cream-2,#efe7d6);border-radius:14px;padding:14px;margin-bottom:14px}
+.bk-cal-head{display:flex;align-items:center;justify-content:space-between;margin-bottom:10px}
+.bk-cal-title{font-weight:700;font-size:1rem;color:var(--green,#2f3d2f);text-transform:capitalize}
+.bk-nav{width:34px;height:34px;border:1px solid var(--gold,#b08d57);background:#fff;color:var(--gold,#b08d57);border-radius:9px;font-size:1.2rem;line-height:1;cursor:pointer;transition:.2s}
+.bk-nav:hover:not(:disabled){background:var(--gold,#b08d57);color:#fff}
+.bk-nav:disabled{opacity:.3;cursor:not-allowed}
+.bk-dow{display:grid;grid-template-columns:repeat(7,1fr);gap:4px;margin-bottom:4px}
+.bk-dow span{text-align:center;font-size:.72rem;font-weight:700;color:var(--muted,#6f6a5f);text-transform:uppercase}
+.bk-grid{display:grid;grid-template-columns:repeat(7,1fr);gap:4px}
+.bk-day{aspect-ratio:1/1;display:flex;align-items:center;justify-content:center;font-size:.88rem;border-radius:8px;cursor:pointer;border:1px solid transparent;transition:.12s;user-select:none}
+.bk-day:hover:not(.bk-dis):not(.bk-empty){background:var(--gold-light,#c9a877);color:#fff}
+.bk-day.bk-empty{cursor:default}
+.bk-day.bk-dis{color:#c7c0b2;cursor:not-allowed;text-decoration:line-through}
+.bk-day.bk-in,.bk-day.bk-out{background:var(--green,#2f3d2f);color:#fff;font-weight:700}
+.bk-day.bk-range{background:var(--gold-light,#c9a877);color:#fff;border-radius:0}
+.bk-day.bk-in{border-radius:8px 0 0 8px}
+.bk-day.bk-out{border-radius:0 8px 8px 0}
+.bk-summary{display:flex;align-items:center;justify-content:space-between;gap:10px;background:var(--green,#2f3d2f);color:#fff;border-radius:12px;padding:12px 16px;margin-bottom:16px;font-size:.92rem}
+.bk-summary .bk-nights{font-weight:700;color:var(--gold-light,#c9a877);white-space:nowrap}
+@media(max-width:480px){.bk-day{font-size:.8rem}}
+</style>
 </head>
 <body>
 
@@ -177,26 +199,37 @@ El baño también muy complet…”</p><div class="who"><span class="av"><img sr
     <p>Cuéntanos tus fechas y te confirmamos disponibilidad sin compromiso. Atendemos personalmente cada solicitud.</p>
     <ul class="ci-list">
       <li><div class="ico">📞</div><div><b>Teléfono</b><a href="tel:+34618129255">+34 618 12 92 55</a> · <a href="tel:+34659062480">+34 659 06 24 80</a></div></li>
-      <li><div class="ico">💬</div><div><b>WhatsApp</b><a href="https://wa.me/34618129255" target="_blank">Escríbenos al +34 618 12 92 55</a></div></li>
+      <li><div class="ico">💬</div><div><b>WhatsApp</b><a href="https://wa.me/34618129255" target="_blank">+34 618 12 92 55</a> · <a href="https://wa.me/34659062480" target="_blank">+34 659 06 24 80</a></div></li>
       <li><div class="ico">📍</div><div><b>Dirección</b><span>Burruzkale Kalea, 10, Zubiaur, 48410 Zubiaur, Bizkaia</span></div></li>
     </ul>
     <a href="https://wa.me/34618129255?text=Hola%2C%20me%20gustar%C3%ADa%20consultar%20disponibilidad%20en%20Burruzkale%20Etxea" target="_blank" class="btn btn-wa">💬 Reservar por WhatsApp</a>
   </div>
-  <form class="form reveal" id="resForm" data-wa="34618129255" data-name="Burruzkale Etxea">
-    <h3>Solicita tu reserva</h3>
-    <p class="sub">Rellena el formulario y abriremos WhatsApp con tu consulta lista para enviar.</p>
+  <form class="form reveal" id="bookForm" data-wa="34618129255" data-name="Burruzkale Etxea">
+    <h3>Reserva tu estancia</h3>
+    <p class="sub">Elige tus fechas en el calendario y te confirmamos disponibilidad sin compromiso.</p>
+    <div class="bk-cal" id="bkCal">
+      <div class="bk-cal-head">
+        <button type="button" class="bk-nav" id="bkPrev" aria-label="Mes anterior">‹</button>
+        <div class="bk-cal-title" id="bkTitle">—</div>
+        <button type="button" class="bk-nav" id="bkNext" aria-label="Mes siguiente">›</button>
+      </div>
+      <div class="bk-dow"><span>L</span><span>M</span><span>X</span><span>J</span><span>V</span><span>S</span><span>D</span></div>
+      <div class="bk-grid" id="bkGrid"></div>
+    </div>
+    <div class="bk-summary" id="bkSummary">
+      <div class="bk-sum-dates"><span id="bkInfo">Selecciona tu fecha de entrada</span></div>
+      <div class="bk-nights" id="bkNights"></div>
+    </div>
+    <input type="hidden" id="entrada"><input type="hidden" id="salida">
     <div class="field"><label for="nombre">Nombre</label><input type="text" id="nombre" placeholder="Tu nombre" required></div>
     <div class="field-row">
-      <div class="field"><label for="entrada">Entrada</label><input type="date" id="entrada" required></div>
-      <div class="field"><label for="salida">Salida</label><input type="date" id="salida" required></div>
+      <div class="field"><label for="habitacion">Habitación</label><select id="habitacion"><option>Habitación doble</option><option>Habitación individual</option><option>Indiferente</option></select></div>
+      <div class="field"><label for="personas">Personas</label><select id="personas"><option>1 persona</option><option selected>2 personas</option><option>3 personas</option><option>4 personas</option></select></div>
     </div>
-    <div class="field-row">
-      <div class="field"><label for="personas">Personas</label><select id="personas"><option>1-2 personas</option><option>3-4 personas</option><option>5-6 personas</option><option>7 o más</option></select></div>
-      <div class="field"><label for="tel">Tu teléfono</label><input type="tel" id="tel" placeholder="6XX XXX XXX"></div>
-    </div>
-    <div class="field"><label for="msg">Mensaje (opcional)</label><textarea id="msg" rows="3" placeholder="¿Algún detalle que debamos saber?"></textarea></div>
-    <button type="submit" class="btn btn-primary">Enviar solicitud por WhatsApp</button>
-    <p class="form-note">Sin compromiso · Te respondemos en el mismo día</p>
+    <div class="field"><label for="tel">Tu teléfono</label><input type="tel" id="tel" placeholder="6XX XXX XXX"></div>
+    <div class="field"><label for="msg">Mensaje (opcional)</label><textarea id="msg" rows="2" placeholder="¿Algún detalle que debamos saber?"></textarea></div>
+    <button type="submit" class="btn btn-primary">Solicitar reserva por WhatsApp</button>
+    <p class="form-note">Sin compromiso · Te confirmamos disponibilidad el mismo día</p>
   </form>
 </div></section>
 
@@ -211,5 +244,88 @@ El baño también muy complet…”</p><div class="who"><span class="av"><img sr
 
 <div class="lightbox" id="lightbox"><span class="close" id="lbClose">×</span><img id="lbImg" src="" alt=""></div>
 <script src="../assets/eguzki.js"></script>
+<script>
+(function(){
+  const grid=document.getElementById('bkGrid');
+  if(!grid)return;
+  const titleEl=document.getElementById('bkTitle'),infoEl=document.getElementById('bkInfo'),
+        nightsEl=document.getElementById('bkNights'),prevBtn=document.getElementById('bkPrev'),
+        nextBtn=document.getElementById('bkNext'),entIn=document.getElementById('entrada'),
+        salIn=document.getElementById('salida');
+  const MES=['enero','febrero','marzo','abril','mayo','junio','julio','agosto','septiembre','octubre','noviembre','diciembre'];
+  const MES_C=['ene','feb','mar','abr','may','jun','jul','ago','sep','oct','nov','dic'];
+  const DOW=['dom','lun','mar','mié','jue','vie','sáb'];
+  const today=new Date();today.setHours(0,0,0,0);
+  let view=new Date(today.getFullYear(),today.getMonth(),1);
+  let checkIn=null,checkOut=null;
+  const iso=d=>`${String(d.getDate()).padStart(2,'0')}/${String(d.getMonth()+1).padStart(2,'0')}/${d.getFullYear()}`;
+  const pretty=d=>`${DOW[d.getDay()]} ${d.getDate()} ${MES_C[d.getMonth()]}`;
+  const same=(a,b)=>a&&b&&a.getTime()===b.getTime();
+
+  function render(){
+    titleEl.textContent=`${MES[view.getMonth()]} ${view.getFullYear()}`;
+    prevBtn.disabled=(view.getFullYear()===today.getFullYear()&&view.getMonth()===today.getMonth());
+    grid.innerHTML='';
+    let first=new Date(view.getFullYear(),view.getMonth(),1);
+    let offset=(first.getDay()+6)%7; // lunes primero
+    const daysInMonth=new Date(view.getFullYear(),view.getMonth()+1,0).getDate();
+    for(let i=0;i<offset;i++){const e=document.createElement('div');e.className='bk-day bk-empty';grid.appendChild(e);}
+    for(let d=1;d<=daysInMonth;d++){
+      const cell=document.createElement('div');cell.className='bk-day';cell.textContent=d;
+      const date=new Date(view.getFullYear(),view.getMonth(),d);
+      if(date<today){cell.classList.add('bk-dis');}
+      else{
+        if(same(date,checkIn))cell.classList.add('bk-in');
+        if(same(date,checkOut))cell.classList.add('bk-out');
+        if(checkIn&&checkOut&&date>checkIn&&date<checkOut)cell.classList.add('bk-range');
+        cell.addEventListener('click',()=>pick(date));
+      }
+      grid.appendChild(cell);
+    }
+  }
+  function pick(date){
+    if(!checkIn||(checkIn&&checkOut)){checkIn=date;checkOut=null;}
+    else if(date>checkIn){checkOut=date;}
+    else{checkIn=date;checkOut=null;}
+    sync();render();
+  }
+  function sync(){
+    if(checkIn&&checkOut){
+      const n=Math.round((checkOut-checkIn)/86400000);
+      infoEl.textContent=`${pretty(checkIn)} → ${pretty(checkOut)}`;
+      nightsEl.textContent=n+(n===1?' noche':' noches');
+      entIn.value=iso(checkIn);salIn.value=iso(checkOut);
+    }else if(checkIn){
+      infoEl.textContent=`Entrada: ${pretty(checkIn)} · elige la salida`;
+      nightsEl.textContent='';entIn.value=iso(checkIn);salIn.value='';
+    }else{
+      infoEl.textContent='Selecciona tu fecha de entrada';
+      nightsEl.textContent='';entIn.value='';salIn.value='';
+    }
+  }
+  prevBtn.addEventListener('click',()=>{view=new Date(view.getFullYear(),view.getMonth()-1,1);render();});
+  nextBtn.addEventListener('click',()=>{view=new Date(view.getFullYear(),view.getMonth()+1,1);render();});
+  render();
+
+  const form=document.getElementById('bookForm');
+  form.addEventListener('submit',e=>{
+    e.preventDefault();
+    if(!checkIn||!checkOut){infoEl.textContent='⚠️ Elige fechas de entrada y salida';return;}
+    const wa=form.dataset.wa,name=form.dataset.name||'el alojamiento';
+    const g=id=>{const el=document.getElementById(id);return el?el.value:'';};
+    const n=Math.round((checkOut-checkIn)/86400000);
+    let t=`Hola! Quiero reservar en ${name}.%0A%0A`+
+      `👤 Nombre: ${g('nombre')||'—'}%0A`+
+      `📅 Entrada: ${iso(checkIn)}%0A`+
+      `📅 Salida: ${iso(checkOut)}%0A`+
+      `🌙 Noches: ${n}%0A`+
+      `🛏️ Habitación: ${g('habitacion')}%0A`+
+      `👥 Personas: ${g('personas')}%0A`+
+      `📞 Tel: ${g('tel')||'—'}`;
+    if(g('msg'))t+=`%0A📝 ${g('msg')}`;
+    window.open(`https://wa.me/${wa}?text=${t}`,'_blank');
+  });
+})();
+</script>
 </body>
 </html>
