@@ -58,6 +58,12 @@
 .zona-card .ztag{margin-top:auto;font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;color:var(--gold,#b08d57);font-weight:700}
 @media(max-width:900px){.zona-grid{grid-template-columns:1fr 1fr}}
 @media(max-width:520px){.zona-grid{grid-template-columns:1fr}}
+.io-grid{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+.io-card{background:#fff;border:1px solid var(--cream-2,#efe7d6);border-radius:16px;padding:30px;box-shadow:0 14px 40px -26px rgba(38,36,31,.3)}
+.io-card .ico{font-size:1.8rem;margin-bottom:10px}
+.io-card h3{font-family:'Fraunces',Georgia,serif;font-size:1.3rem;font-weight:600;color:var(--green,#2f3d2f);margin-bottom:8px}
+.io-card p{color:var(--muted,#6f6a5f);font-size:.96rem}
+@media(max-width:680px){.io-grid{grid-template-columns:1fr}}
 .brand{align-items:center}
 .brand .brandlogo{height:46px;width:46px;flex:none;object-fit:contain;background:#fff;border-radius:11px;padding:5px;box-shadow:0 3px 12px rgba(38,36,31,.12);display:block}
 .brand .name{align-self:center}
@@ -105,7 +111,7 @@ header.scrolled .langs button{color:var(--green,#2f3d2f)}
   <div class="wrap hero-inner">
     <div class="eyebrow" style="color:var(--gold-light)">Orozko · Bizkaia</div>
     <h1 data-i18n="heroH1">Tu escapada en <em>Orozko</em></h1>
-    <p data-i18n="heroP">Habitaciones turísticas en plena naturaleza para desconectar de verdad. Descanso, encanto y el mejor trato, en el corazón de Bizkaia.</p>
+    <p data-i18n="heroP">Descansa entre montañas, disfruta del confort y vive la esencia de Orozko.</p>
     <div class="hero-cta">
       <a href="#reservar" class="btn btn-primary" data-i18n="ctaDisp">Consultar disponibilidad</a>
       <a href="#galeria" class="btn btn-ghost" data-i18n="ctaDescubrir">Descubrir la casa</a>
@@ -145,6 +151,11 @@ header.scrolled .langs button{color:var(--green,#2f3d2f)}
     <img src="img/bk-09.jpg" alt="Habitación de Burruzkale Etxea">
     <img class="float" src="img/bk-01.jpg" alt="Fachada de Burruzkale Etxea">
   </div>
+</div></section>
+
+<section class="pad" id="nosotros"><div class="wrap" style="max-width:800px;text-align:center">
+  <div class="section-head center reveal" style="margin-bottom:24px"><div class="eyebrow" data-i18n="nosEye">Sobre nosotros</div><h2 data-i18n="nosH2">Turismo responsable</h2></div>
+  <p class="reveal" style="font-size:1.12rem;line-height:1.8;color:var(--muted,#6f6a5f)" data-i18n="nosP">En Burruzkale Etxea creemos en un turismo responsable. Unimos confort y privacidad con el respeto por la naturaleza gracias a nuestra climatización geotérmica, el suelo radiante y la energía solar. Un refugio donde queremos que te sientas como en casa.</p>
 </div></section>
 
 <section class="pad exterior" id="exterior"><div class="wrap">
@@ -244,9 +255,9 @@ El baño también muy complet…”</p><div class="who"><span class="av"><img sr
 <section class="pad loc" id="ubicacion"><div class="wrap loc-grid">
   <div class="loc-copy reveal">
     <div class="eyebrow" style="color:var(--gold-light)" data-i18n="ubiEye">Ubicación</div>
-    <h2 data-i18n="ubiH2">En pleno centro de Orozko</h2>
-    <p data-i18n="ubiP1">Burruzkale Etxea está <strong>en el centro del pueblo</strong>, con todos los servicios de Orozko —tiendas, bares, restaurantes, farmacia y panadería— a un paso, sin necesidad de coger el coche.</p>
-    <p data-i18n="ubiP2">Y, a la vez, rodeado de naturaleza en el corazón de Bizkaia: el punto de partida perfecto para descubrir la zona.</p>
+    <h2 data-i18n="ubiH2">Naturaleza y comodidad en el corazón de Orozko</h2>
+    <p data-i18n="ubiP1"><strong>Estamos en pleno centro de Orozko</strong>, a pocos pasos de restaurantes, supermercados, farmacia y transporte público, y a un paso de las principales rutas del Parque Natural de Gorbeia.</p>
+    <p data-i18n="ubiP2">Queremos que disfrutes de la tranquilidad de un entorno rural sin renunciar a las comodidades del día a día.</p>
     <p style="margin-top:10px;font-size:.95rem"><strong style="color:var(--gold-light)" data-i18n="addrLabel">Dirección:</strong> Burruzkale Kalea, 10, 48410 Orozko, Bizkaia</p>
     <a href="https://www.google.com/maps/search/?api=1&query=43.1062168,-2.9131166" target="_blank" class="btn btn-primary" style="margin-top:24px" data-i18n="ubiBtn">Abrir en Google Maps</a>
   </div>
@@ -274,6 +285,14 @@ El baño también muy complet…”</p><div class="who"><span class="av"><img sr
         <div class="room-foot"><span class="room-price" data-i18n="roomPrice">Consúltanos<small>según fechas</small></span><button type="button" class="btn btn-primary room-btn" data-idx="1" data-i18n="btnReservar">Reservar</button></div>
       </div>
     </div>
+  </div>
+</div></section>
+
+<section class="pad" id="checkin"><div class="wrap">
+  <div class="section-head center reveal"><div class="eyebrow" data-i18n="ciEye">Llegadas y salidas</div><h2 data-i18n="ciH2">Check-in y check-out</h2></div>
+  <div class="io-grid">
+    <div class="io-card reveal"><div class="ico">🔑</div><h3 data-i18n="ciInT">Llegadas (Check-in)</h3><p data-i18n="ciInP">Queremos que tu entrada sea rápida y cómoda, por eso contamos con auto check-in: te enviamos todas las indicaciones por WhatsApp el mismo día de tu llegada. Y si necesitas ayuda, nos tienes encantados en el 618 12 92 55 o el 659 06 24 80.</p></div>
+    <div class="io-card reveal"><div class="ico">🧳</div><h3 data-i18n="ciOutT">Salidas (Check-out)</h3><p data-i18n="ciOutP">Solo te pedimos que dejes la habitación antes de las 12:00 h del mediodía.</p></div>
   </div>
 </div></section>
 
@@ -337,7 +356,7 @@ El baño también muy complet…”</p><div class="who"><span class="av"><img sr
       brandSub:`Habitaciones turísticas`,
       navCasa:`La Casa`,navGaleria:`Galería`,navOpiniones:`Opiniones`,navUbicacion:`Ubicación`,navReservar:`Reservar`,
       heroH1:`Tu escapada en <em>Orozko</em>`,
-      heroP:`Habitaciones turísticas en plena naturaleza para desconectar de verdad. Descanso, encanto y el mejor trato, en el corazón de Bizkaia.`,
+      heroP:`Descansa entre montañas, disfruta del confort y vive la esencia de Orozko.`,
       ctaDisp:`Consultar disponibilidad`,ctaDescubrir:`Descubrir la casa`,
       badgeRev:`4.8/5 · 57 opiniones reales`,badgeCentro:`📍 En pleno centro de Orozko`,badgeWa:`💬 Reserva directa por WhatsApp`,scroll:`Desliza<span>↓</span>`,
       statRating:`Valoración en Google`,statReviews:`Opiniones reales`,
@@ -365,10 +384,12 @@ El baño también muy complet…”</p><div class="who"><span class="av"><img sr
       z3t:`Salto del Nervión`,z3d:`La cascada más alta de la Península Ibérica (222 m), espectacular tras la lluvia. Mirador y rutas por el cañón de Delika y Monte Santiago.`,z3tag:`~40 min en coche`,
       z4t:`Valle de Orozko`,z4d:`Pasea por sus barrios rurales, caseríos y ermitas, y acércate al museo etnográfico del valle para conocer su historia.`,z4tag:`Estás en él`,
       z5t:`Bilbao y alrededores`,z5d:`Museo Guggenheim, Casco Viejo y toda la oferta de la capital vizcaína a media hora en coche. Vitoria-Gasteiz también muy cerca.`,z5tag:`~30 min en coche`,
-      ubiEye:`Ubicación`,ubiH2:`En pleno centro de Orozko`,
-      ubiP1:`Burruzkale Etxea está <strong>en el centro del pueblo</strong>, con todos los servicios de Orozko —tiendas, bares, restaurantes, farmacia y panadería— a un paso, sin necesidad de coger el coche.`,
-      ubiP2:`Y, a la vez, rodeado de naturaleza en el corazón de Bizkaia: el punto de partida perfecto para descubrir la zona.`,
+      ubiEye:`Ubicación`,ubiH2:`Naturaleza y comodidad en el corazón de Orozko`,
+      ubiP1:`<strong>Estamos en pleno centro de Orozko</strong>, a pocos pasos de restaurantes, supermercados, farmacia y transporte público, y a un paso de las principales rutas del Parque Natural de Gorbeia.`,
+      ubiP2:`Queremos que disfrutes de la tranquilidad de un entorno rural sin renunciar a las comodidades del día a día.`,
       addrLabel:`Dirección:`,ubiBtn:`Abrir en Google Maps`,
+      nosEye:`Sobre nosotros`,nosH2:`Turismo responsable`,nosP:`En Burruzkale Etxea creemos en un turismo responsable. Unimos confort y privacidad con el respeto por la naturaleza gracias a nuestra climatización geotérmica, el suelo radiante y la energía solar. Un refugio donde queremos que te sientas como en casa.`,
+      ciEye:`Llegadas y salidas`,ciH2:`Check-in y check-out`,ciInT:`Llegadas (Check-in)`,ciInP:`Queremos que tu entrada sea rápida y cómoda, por eso contamos con auto check-in: te enviamos todas las indicaciones por WhatsApp el mismo día de tu llegada. Y si necesitas ayuda, nos tienes encantados en el 618 12 92 55 o el 659 06 24 80.`,ciOutT:`Salidas (Check-out)`,ciOutP:`Solo te pedimos que dejes la habitación antes de las 12:00 h del mediodía.`,
       habEye:`Habitaciones`,habH2:`Elige tu habitación`,habP:`Dos tipos de habitación para que elijas la que mejor se adapta a tu escapada.`,
       r1tag:`3 disponibles`,r1t:`Habitación Estándar`,r1d:`Habitaciones acogedoras con pared de piedra y vigas de madera, baño privado y todo el equipamiento. Perfectas para una escapada en pareja.`,
       r2tag:`2 disponibles`,r2t:`Habitación Superior`,r2d:`Nuestras habitaciones más amplias, con más espacio y luz, pared de piedra y vigas. Ideales para disfrutar con la máxima comodidad.`,
@@ -389,7 +410,7 @@ El baño también muy complet…”</p><div class="who"><span class="av"><img sr
       brandSub:`Logela turistikoak`,
       navCasa:`Etxea`,navGaleria:`Galeria`,navOpiniones:`Iritziak`,navUbicacion:`Kokapena`,navReservar:`Erreserbatu`,
       heroH1:`Zure ihesaldia <em>Orozkon</em>`,
-      heroP:`Logela turistikoak natura erdian, benetan deskonektatzeko. Atsedena, xarma eta tratu hoberena, Bizkaiaren bihotzean.`,
+      heroP:`Atseden hartu mendien artean, gozatu erosotasunaz eta bizi Orozkoren funtsa.`,
       ctaDisp:`Eskuragarritasuna kontsultatu`,ctaDescubrir:`Etxea ezagutu`,
       badgeRev:`4,8/5 · 57 benetako iritzi`,badgeCentro:`📍 Orozkoren erdi-erdian`,badgeWa:`💬 Erreserba zuzena WhatsApp bidez`,scroll:`Lerratu<span>↓</span>`,
       statRating:`Google-ko balorazioa`,statReviews:`Benetako iritziak`,
@@ -417,10 +438,12 @@ El baño también muy complet…”</p><div class="who"><span class="av"><img sr
       z3t:`Nerbioiko ur-jauzia`,z3d:`Iberiar penintsulako ur-jauzirik altuena (222 m), ikusgarria euria egin ondoren. Begiratokia eta ibilbideak Delikako arroilan eta Santiago mendian.`,z3tag:`~40 min autoz`,
       z4t:`Orozkoko harana`,z4d:`Ibili bere auzo, baserri eta ermitetan barrena, eta hurbildu haraneko museo etnografikora bere historia ezagutzeko.`,z4tag:`Bertan zaude`,
       z5t:`Bilbo eta inguruak`,z5d:`Guggenheim Museoa, Alde Zaharra eta hiriburuaren eskaintza guztia, ordu erdira autoz. Vitoria-Gasteiz ere oso gertu.`,z5tag:`~30 min autoz`,
-      ubiEye:`Kokapena`,ubiH2:`Orozkoren erdi-erdian`,
-      ubiP1:`Burruzkale Etxea <strong>herriaren erdigunean</strong> dago, Orozkoko zerbitzu guztiekin —dendak, tabernak, jatetxeak, farmazia eta okindegia— oinez, autoa hartu beharrik gabe.`,
-      ubiP2:`Eta, aldi berean, naturaz inguratuta Bizkaiaren bihotzean: ingurua ezagutzeko abiapuntu ezin hobea.`,
+      ubiEye:`Kokapena`,ubiH2:`Natura eta erosotasuna Orozkoren bihotzean`,
+      ubiP1:`<strong>Orozkoren erdi-erdian gaude</strong>, jatetxe, supermerkatu, farmazia eta garraio publikotik gertu, eta Gorbeiako Parke Naturaleko ibilbide nagusietatik oso hurbil.`,
+      ubiP2:`Landa-ingurune baten lasaitasunaz gozatzea nahi dugu, eguneroko erosotasunei uko egin gabe.`,
       addrLabel:`Helbidea:`,ubiBtn:`Google Maps-en ireki`,
+      nosEye:`Guri buruz`,nosH2:`Turismo arduratsua`,nosP:`Burruzkale Etxean turismo arduratsuan sinesten dugu. Erosotasuna eta pribatutasuna naturarekiko errespetuarekin uztartzen ditugu, gure klimatizazio geotermikoari, lurzoru erradiatzaileari eta eguzki-energiari esker. Etxean bezala sentitzea nahi dugun aterpea.`,
+      ciEye:`Sarrerak eta irteerak`,ciH2:`Check-in eta check-out`,ciInT:`Sarrerak (Check-in)`,ciInP:`Zure sarrera azkarra eta erosoa izatea nahi dugu, horregatik auto check-in-a dugu: argibide guztiak WhatsApp bidez bidaltzen dizkizugu zure iristeko egun berean. Eta laguntza behar baduzu, pozik artatuko zaitugu 618 12 92 55 edo 659 06 24 80 telefonoetan.`,ciOutT:`Irteerak (Check-out)`,ciOutP:`Logela eguerdiko 12:00ak baino lehen uztea eskatzen dizugu.`,
       habEye:`Logelak`,habH2:`Aukeratu zure logela`,habP:`Bi logela mota, zure ihesaldira ondoen egokitzen dena aukeratzeko.`,
       r1tag:`3 eskuragarri`,r1t:`Logela Estandarra`,r1d:`Logela atseginak, harrizko hormarekin eta egurrezko habeekin, komun pribatuarekin eta ekipamendu guztiarekin. Bikotearentzako ihesaldi ezin hobea.`,
       r2tag:`2 eskuragarri`,r2t:`Logela Superiorra`,r2d:`Gure logela zabalenak, leku eta argi gehiagorekin, harrizko horma eta habeekin. Erosotasun handienarekin gozatzeko aproposak.`,
@@ -441,7 +464,7 @@ El baño también muy complet…”</p><div class="who"><span class="av"><img sr
       brandSub:`Tourist rooms`,
       navCasa:`The House`,navGaleria:`Gallery`,navOpiniones:`Reviews`,navUbicacion:`Location`,navReservar:`Book`,
       heroH1:`Your getaway in <em>Orozko</em>`,
-      heroP:`Tourist rooms surrounded by nature to truly disconnect. Rest, charm and the warmest welcome, in the heart of Bizkaia.`,
+      heroP:`Rest among the mountains, enjoy the comfort and live the essence of Orozko.`,
       ctaDisp:`Check availability`,ctaDescubrir:`Discover the house`,
       badgeRev:`4.8/5 · 57 real reviews`,badgeCentro:`📍 Right in the centre of Orozko`,badgeWa:`💬 Direct booking via WhatsApp`,scroll:`Scroll<span>↓</span>`,
       statRating:`Google rating`,statReviews:`Real reviews`,
@@ -469,10 +492,12 @@ El baño también muy complet…”</p><div class="who"><span class="av"><img sr
       z3t:`Nervión Waterfall`,z3d:`The highest waterfall in the Iberian Peninsula (222 m), spectacular after rain. Viewpoint and trails through the Delika canyon and Monte Santiago.`,z3tag:`~40 min by car`,
       z4t:`Orozko Valley`,z4d:`Stroll through its rural neighbourhoods, farmhouses and hermitages, and visit the valley's ethnographic museum to learn its history.`,z4tag:`You're in it`,
       z5t:`Bilbao and surroundings`,z5d:`The Guggenheim Museum, the Old Town and everything the Biscayan capital offers, half an hour away by car. Vitoria-Gasteiz is also very close.`,z5tag:`~30 min by car`,
-      ubiEye:`Location`,ubiH2:`Right in the centre of Orozko`,
-      ubiP1:`Burruzkale Etxea is <strong>in the centre of the village</strong>, with all of Orozko's services —shops, bars, restaurants, pharmacy and bakery— a short walk away, no car needed.`,
-      ubiP2:`And, at the same time, surrounded by nature in the heart of Bizkaia: the perfect base to explore the area.`,
+      ubiEye:`Location`,ubiH2:`Nature and comfort in the heart of Orozko`,
+      ubiP1:`<strong>We're right in the centre of Orozko</strong>, just steps from restaurants, supermarkets, a pharmacy and public transport, and a stone's throw from the main trails of the Gorbeia Natural Park.`,
+      ubiP2:`We want you to enjoy the peace of a rural setting without giving up the comforts of everyday life.`,
       addrLabel:`Address:`,ubiBtn:`Open in Google Maps`,
+      nosEye:`About us`,nosH2:`Responsible tourism`,nosP:`At Burruzkale Etxea we believe in responsible tourism. We combine comfort and privacy with respect for nature thanks to our geothermal climate control, underfloor heating and solar energy. A refuge where we want you to feel at home.`,
+      ciEye:`Arrivals & departures`,ciH2:`Check-in and check-out`,ciInT:`Arrivals (Check-in)`,ciInP:`We want your arrival to be quick and easy, so we offer self check-in: we send you all the instructions by WhatsApp on the day you arrive. And if you need help, we're happy to assist you on 618 12 92 55 or 659 06 24 80.`,ciOutT:`Departures (Check-out)`,ciOutP:`We just ask that you leave the room before 12:00 noon.`,
       habEye:`Rooms`,habH2:`Choose your room`,habP:`Two room types so you can choose the one that best suits your getaway.`,
       r1tag:`3 available`,r1t:`Standard Room`,r1d:`Cosy rooms with stone walls and wooden beams, private bathroom and full equipment. Perfect for a couple's getaway.`,
       r2tag:`2 available`,r2t:`Superior Room`,r2d:`Our largest rooms, with more space and light, stone walls and beams. Ideal for enjoying maximum comfort.`,
