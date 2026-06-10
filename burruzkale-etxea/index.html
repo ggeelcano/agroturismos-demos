@@ -34,6 +34,21 @@
 .bk-summary{display:flex;align-items:center;justify-content:space-between;gap:10px;background:var(--green,#2f3d2f);color:#fff;border-radius:12px;padding:12px 16px;margin-bottom:16px;font-size:.92rem}
 .bk-summary .bk-nights{font-weight:700;color:var(--gold-light,#c9a877);white-space:nowrap}
 @media(max-width:480px){.bk-day{font-size:.8rem}}
+.rooms-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+.room-card{background:#fff;border:1px solid var(--cream-2,#efe7d6);border-radius:var(--radius,18px);overflow:hidden;box-shadow:var(--shadow,0 24px 60px -28px rgba(38,36,31,.45));display:flex;flex-direction:column}
+.room-img{position:relative;height:250px}
+.room-img img{width:100%;height:100%;object-fit:cover}
+.room-tag{position:absolute;top:12px;left:12px;background:var(--green,#2f3d2f);color:#fff;font-size:.76rem;font-weight:600;padding:5px 12px;border-radius:30px}
+.room-body{padding:26px;display:flex;flex-direction:column;flex:1}
+.room-body h3{font-size:1.45rem;margin-bottom:8px;color:var(--green,#2f3d2f)}
+.room-body>p{color:var(--muted,#6f6a5f);font-size:.95rem;margin-bottom:14px}
+.room-feats{list-style:none;display:flex;flex-wrap:wrap;gap:8px 16px;margin:0 0 18px;padding:0}
+.room-feats li{font-size:.88rem;font-weight:500;color:var(--ink,#26241f)}
+.room-foot{display:flex;align-items:center;justify-content:space-between;margin-top:auto;gap:12px}
+.room-price{font-weight:700;color:var(--gold,#b08d57);font-size:1.02rem}
+.room-price small{display:block;font-size:.72rem;color:var(--muted,#6f6a5f);font-weight:400}
+.room-btn{padding:11px 22px}
+@media(max-width:760px){.rooms-grid{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
@@ -163,6 +178,9 @@
       <img src="img/bk-23.jpg" alt="Baño de piedra con doble lavabo">
       <img src="img/bk-32.jpg" alt="Baño con balcón al pueblo">
       <img src="img/bk-21.jpg" alt="Baño moderno con ducha">
+      <img src="img/bk-06.jpg" alt="Hervidor de agua e infusiones en la habitación">
+      <img src="img/bk-02.jpg" alt="Cafetera Nespresso en la zona común">
+      <img src="img/bk-04.jpg" alt="Escritorio con nevera en la habitación">
   </div>
 </div></section>
 
@@ -190,6 +208,30 @@ El baño también muy complet…”</p><div class="who"><span class="av"><img sr
     <a href="https://www.google.com/maps/search/?api=1&query=43.1062168,-2.9131166" target="_blank" class="btn btn-primary" style="margin-top:24px">Abrir en Google Maps</a>
   </div>
   <div class="loc-map reveal"><iframe loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=43.1062168,-2.9131166&output=embed"></iframe></div>
+</div></section>
+
+<section class="pad" id="habitaciones"><div class="wrap">
+  <div class="section-head center reveal"><div class="eyebrow">Habitaciones</div><h2>Elige tu habitación</h2><p>Dos tipos de habitación para que elijas la que mejor se adapta a tu escapada.</p></div>
+  <div class="rooms-grid">
+    <div class="room-card reveal">
+      <div class="room-img"><img src="img/bk-10.jpg" alt="Habitación Estándar de Burruzkale Etxea"><span class="room-tag">3 disponibles</span></div>
+      <div class="room-body">
+        <h3>Habitación Estándar</h3>
+        <p>Habitaciones acogedoras con pared de piedra y vigas de madera, baño privado y todo el equipamiento. Perfectas para una escapada en pareja.</p>
+        <ul class="room-feats"><li>👥 Hasta 2 personas</li><li>🚿 Baño privado</li><li>📺 TV · 🧊 Nevera</li></ul>
+        <div class="room-foot"><span class="room-price">Consúltanos<small>según fechas</small></span><button type="button" class="btn btn-primary room-btn" data-room="Habitación Estándar">Reservar</button></div>
+      </div>
+    </div>
+    <div class="room-card reveal">
+      <div class="room-img"><img src="img/bk-29.jpg" alt="Habitación Superior de Burruzkale Etxea"><span class="room-tag">2 disponibles</span></div>
+      <div class="room-body">
+        <h3>Habitación Superior</h3>
+        <p>Nuestras habitaciones más amplias, con más espacio y luz, pared de piedra y vigas. Ideales para disfrutar con la máxima comodidad.</p>
+        <ul class="room-feats"><li>👥 Hasta 3 personas</li><li>🚿 Baño privado</li><li>📺 TV · 🧊 Nevera</li></ul>
+        <div class="room-foot"><span class="room-price">Consúltanos<small>según fechas</small></span><button type="button" class="btn btn-primary room-btn" data-room="Habitación Superior">Reservar</button></div>
+      </div>
+    </div>
+  </div>
 </div></section>
 
 <section class="pad" id="reservar"><div class="wrap contact-grid">
@@ -223,7 +265,7 @@ El baño también muy complet…”</p><div class="who"><span class="av"><img sr
     <input type="hidden" id="entrada"><input type="hidden" id="salida">
     <div class="field"><label for="nombre">Nombre</label><input type="text" id="nombre" placeholder="Tu nombre" required></div>
     <div class="field-row">
-      <div class="field"><label for="habitacion">Habitación</label><select id="habitacion"><option>Habitación doble</option><option>Habitación individual</option><option>Indiferente</option></select></div>
+      <div class="field"><label for="habitacion">Habitación</label><select id="habitacion"><option>Habitación Estándar</option><option>Habitación Superior</option><option>Indiferente</option></select></div>
       <div class="field"><label for="personas">Personas</label><select id="personas"><option>1 persona</option><option selected>2 personas</option><option>3 personas</option><option>4 personas</option></select></div>
     </div>
     <div class="field"><label for="tel">Tu teléfono</label><input type="tel" id="tel" placeholder="6XX XXX XXX"></div>
@@ -325,6 +367,13 @@ El baño también muy complet…”</p><div class="who"><span class="av"><img sr
     if(g('msg'))t+=`%0A📝 ${g('msg')}`;
     window.open(`https://wa.me/${wa}?text=${t}`,'_blank');
   });
+
+  document.querySelectorAll('.room-btn').forEach(b=>b.addEventListener('click',()=>{
+    const sel=document.getElementById('habitacion');
+    if(sel)sel.value=b.dataset.room;
+    const r=document.getElementById('reservar');
+    if(r)r.scrollIntoView({behavior:'smooth'});
+  }));
 })();
 </script>
 </body>
