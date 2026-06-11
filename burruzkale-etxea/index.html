@@ -64,6 +64,16 @@
 .io-card h3{font-family:'Fraunces',Georgia,serif;font-size:1.3rem;font-weight:600;color:var(--green,#2f3d2f);margin-bottom:8px}
 .io-card p{color:var(--muted,#6f6a5f);font-size:.96rem}
 @media(max-width:680px){.io-grid{grid-template-columns:1fr}}
+.reviews-carousel{position:relative}
+.reviews-grid{display:flex;gap:20px;overflow-x:auto;scroll-snap-type:x mandatory;padding:6px 2px 18px;scroll-behavior:smooth;-webkit-overflow-scrolling:touch}
+.reviews-grid::-webkit-scrollbar{height:7px}
+.reviews-grid::-webkit-scrollbar-track{background:transparent}
+.reviews-grid::-webkit-scrollbar-thumb{background:var(--gold-light,#c9a877);border-radius:10px}
+.reviews-grid .review{flex:0 0 360px;max-width:360px;scroll-snap-align:start}
+.rev-arrow{display:none;position:absolute;top:44%;transform:translateY(-50%);width:46px;height:46px;border-radius:50%;border:none;background:var(--green,#2f3d2f);color:#fff;font-size:1.6rem;line-height:1;cursor:pointer;box-shadow:0 6px 18px -6px rgba(0,0,0,.4);z-index:5;transition:.2s;place-items:center}
+.rev-arrow:hover{background:var(--gold,#b08d57)}
+.rev-prev{left:-12px}.rev-next{right:-12px}
+@media(max-width:480px){.reviews-grid .review{flex:0 0 85%;max-width:85%}}
 .brand{align-items:center}
 .brand .brandlogo{height:46px;width:46px;flex:none;object-fit:contain;background:#fff;border-radius:11px;padding:5px;box-shadow:0 3px 12px rgba(38,36,31,.12);display:block}
 .brand .name{align-self:center}
@@ -231,13 +241,14 @@ header.scrolled .langs button{color:var(--green,#2f3d2f)}
   <div class="reviews-top reveal">
     <div class="score-big"><div class="n">4.8</div><div class="stars">★★★★★</div><div class="src" data-i18n="opSrc">en Google · 57 opiniones</div></div>
   </div>
-  <div class="reviews-grid">
-      <div class="review reveal"><div class="stars">★★★★</div><p>“Bastante nuevo, muy limpio muy dispuesta la dueña. Majo sitio. Entre semana 70€ la doble no me resulta barato. Recomendable sí es para mí.”</p><div class="who"><span class="av"><img src="https://lh3.googleusercontent.com/a-/ALV-UjXCgeXttY82KpCBWZCqUjYJiCoqJXooVaOC6zMD_oBB5lNd16WHwA=s128-c0x00000000-cc-rp-mo-ba6" alt="Juanjuan"></span><div><b>Juanjuan</b><small>★★★★</small></div></div></div>
-      <div class="review reveal"><div class="stars">★★★★★</div><p>“Fuimos este fin de semana y hemos estado super a gusto. El pueblo de Orozko es muy bonito y tiene muchos paseos para andar.
-El hotel está muy bien situado.
-La habitación amplia y muy cómoda, el colchón muy bueno.
-El baño también muy complet…”</p><div class="who"><span class="av"><img src="https://lh3.googleusercontent.com/a/ACg8ocKAzFSJrvqo1y2WXuuRd1Nknm8CdusOPUwf6sVj1cp4cpxc1w=s128-c0x00000000-cc-rp-mo" alt="Marian Bezanilla"></span><div><b>Marian Bezanilla</b><small>★★★★★</small></div></div></div>
-      <div class="review reveal"><div class="stars">★★★★★</div><p>“Habitación amplia y con todos los detalles, nevera, cafetera e infusiones con bombones en la recepción y agua de cortesía en la habitación. Buenas almohadas y cama cómoda. Todo reformado. La única pega que le pongo es que el wifi no funcion…”</p><div class="who"><span class="av"><img src="https://lh3.googleusercontent.com/a/ACg8ocJHqLdjK0v8WdQpOl_skCghiESeR0dJ7tpQTcGLasY9g4aZgw=s128-c0x00000000-cc-rp-mo-ba2" alt="Carol Obiols García"></span><div><b>Carol Obiols García</b><small>★★★★★</small></div></div></div>
+  <div class="reviews-carousel reveal">
+    <button type="button" class="rev-arrow rev-prev" id="revPrev" aria-label="Anterior">‹</button>
+    <div class="reviews-grid" id="reviewsTrack">
+      <div class="review"><div class="stars">★★★★★</div><p>“Fuimos este fin de semana y hemos estado súper a gusto. El pueblo de Orozko es muy bonito y la casa está muy bien situada. La habitación amplia y cómoda, el colchón muy bueno y el baño muy completo. Detalles como agua y pastitas, y cafetera a la entrada. Se nota que la dueña es muy detallista. ¡Repetiremos seguro!”</p><div class="who"><span class="av"><img src="https://lh3.googleusercontent.com/a/ACg8ocKAzFSJrvqo1y2WXuuRd1Nknm8CdusOPUwf6sVj1cp4cpxc1w=s128-c0x00000000-cc-rp-mo" alt="Marian Bezanilla"></span><div><b>Marian Bezanilla</b><small>★★★★★</small></div></div></div>
+      <div class="review"><div class="stars">★★★★★</div><p>“Este hospedaje tiene todas las comodidades: habitación amplia, ambiente rústico, silencioso y con una atmósfera excelente. El anfitrión muy amable, siempre presto a ayudar. Buena iluminación y ubicación. Definitivamente volvería.”</p><div class="who"><span class="av"><img src="https://lh3.googleusercontent.com/a-/ALV-UjXdub-5NfK87cHgW3OcS3ahGwmkbZ5IzQV_KZHJmYzev4wrLU1rLw=s128-c0x00000000-cc-rp-mo-ba4" alt="Mauricio Enriquez"></span><div><b>Mauricio Enriquez</b><small>★★★★★</small></div></div></div>
+      <div class="review"><div class="stars">★★★★★</div><p>“Habitación amplia y con todos los detalles: nevera, cafetera e infusiones con bombones en la recepción y agua de cortesía. Buenas almohadas y cama cómoda. Todo reformado.”</p><div class="who"><span class="av"><img src="https://lh3.googleusercontent.com/a/ACg8ocJHqLdjK0v8WdQpOl_skCghiESeR0dJ7tpQTcGLasY9g4aZgw=s128-c0x00000000-cc-rp-mo-ba2" alt="Carol Obiols García"></span><div><b>Carol Obiols García</b><small>★★★★★</small></div></div></div>
+    </div>
+    <button type="button" class="rev-arrow rev-next" id="revNext" aria-label="Siguiente">›</button>
   </div>
 </div></section>
 
@@ -616,6 +627,15 @@ El baño también muy complet…”</p><div class="who"><span class="av"><img sr
     const r=document.getElementById('reservar');
     if(r)r.scrollIntoView({behavior:'smooth'});
   }));
+
+  // ---------- Carrusel de opiniones ----------
+  const track=document.getElementById('reviewsTrack'),rp=document.getElementById('revPrev'),rn=document.getElementById('revNext');
+  if(track&&rp&&rn){
+    const upd=()=>{const ov=(track.scrollWidth-track.clientWidth>8)&&window.innerWidth>700;rp.style.display=rn.style.display=ov?'grid':'none';};
+    rp.addEventListener('click',()=>track.scrollBy({left:-380,behavior:'smooth'}));
+    rn.addEventListener('click',()=>track.scrollBy({left:380,behavior:'smooth'}));
+    window.addEventListener('resize',upd);upd();
+  }
 
   // ---------- Cambio de idioma ----------
   function setLang(l){if(!T[l])return;LANG=l;try{localStorage.setItem('bk_lang',l);}catch(e){}applyStatic(l);renderDow();render();sync();}
