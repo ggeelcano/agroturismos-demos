@@ -1,0 +1,751 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Villamada Casa Rural · El Real de la Jara, Sierra Norte de Sevilla</title>
+<meta name="description" content="Villamada Casa Rural en El Real de la Jara (Sevilla). Casa entera con piscina privada para hasta 10 personas. 5★ con 64 opiniones. Reserva directa por WhatsApp.">
+<link rel="canonical" href="https://ggeelcano.github.io/agroturismos-demos/villamada-casa-rural/">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://ggeelcano.github.io/agroturismos-demos/villamada-casa-rural/">
+<meta property="og:title" content="Villamada Casa Rural · El Real de la Jara, Sevilla">
+<meta property="og:description" content="Casa entera con piscina privada para hasta 10 personas en la Sierra Norte de Sevilla. 5★ en Google.">
+<meta property="og:image" content="https://ggeelcano.github.io/agroturismos-demos/villamada-casa-rural/img/vm-03.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,400..600&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/eguzki.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LodgingBusiness",
+  "name": "Villamada Casa Rural",
+  "description": "Casa rural completa con piscina privada para hasta 10 personas en El Real de la Jara (Sevilla), en plena Sierra Norte de Sevilla.",
+  "url": "https://ggeelcano.github.io/agroturismos-demos/villamada-casa-rural/",
+  "image": "https://ggeelcano.github.io/agroturismos-demos/villamada-casa-rural/img/vm-03.jpg",
+  "telephone": "+34619980161",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Carretera Santa Olalla, S/N",
+    "addressLocality": "El Real de la Jara",
+    "addressRegion": "Sevilla",
+    "postalCode": "41250",
+    "addressCountry": "ES"
+  },
+  "geo": { "@type": "GeoCoordinates", "latitude": 37.9478962, "longitude": -6.162178 },
+  "aggregateRating": { "@type": "AggregateRating", "ratingValue": "5.0", "reviewCount": "64" }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {"@type":"Question","name":"¿Se alquila la casa entera?","acceptedAnswer":{"@type":"Answer","text":"Sí, Villamada se alquila completa para un solo grupo. Tendréis la casa, el patio, el jardín y la piscina para vosotros, con capacidad para hasta 10 personas."}},
+    {"@type":"Question","name":"¿La piscina es privada?","acceptedAnswer":{"@type":"Answer","text":"Sí, la piscina es de uso exclusivo de la casa, en el patio, con porche y zona de descanso al lado."}},
+    {"@type":"Question","name":"¿Cuántas personas caben?","acceptedAnswer":{"@type":"Answer","text":"La casa está preparada para grupos y familias de hasta 10 personas, con varios dormitorios y baños y un anexo en el patio con chimenea y juegos para los niños."}},
+    {"@type":"Question","name":"¿Está cerca del pueblo?","acceptedAnswer":{"@type":"Answer","text":"Sí. El Real de la Jara está a apenas 5-6 minutos andando, así que no necesitas el coche para llegar al pueblo, sus bares y comercios."}},
+    {"@type":"Question","name":"¿Se admiten barbacoas?","acceptedAnswer":{"@type":"Answer","text":"Sí, la casa cuenta con zona de barbacoa en el patio para que disfrutéis de comidas y cenas al aire libre."}},
+    {"@type":"Question","name":"¿Cómo reservo?","acceptedAnswer":{"@type":"Answer","text":"Elige tus fechas en el calendario y envíanos la solicitud por WhatsApp, o llámanos directamente. Carmen te confirma disponibilidad personalmente, sin compromiso."}}
+  ]
+}
+</script>
+<style>
+.bk-cal{background:var(--cream,#f6f1e7);border:1px solid var(--cream-2,#efe7d6);border-radius:14px;padding:14px;margin-bottom:14px}
+.bk-cal-head{display:flex;align-items:center;justify-content:space-between;margin-bottom:10px}
+.bk-cal-title{font-weight:700;font-size:1rem;color:var(--green,#2f3d2f);text-transform:capitalize}
+.bk-nav{width:34px;height:34px;border:1px solid var(--gold,#b08d57);background:#fff;color:var(--gold,#b08d57);border-radius:9px;font-size:1.2rem;line-height:1;cursor:pointer;transition:.2s}
+.bk-nav:hover:not(:disabled){background:var(--gold,#b08d57);color:#fff}
+.bk-nav:disabled{opacity:.3;cursor:not-allowed}
+.bk-dow{display:grid;grid-template-columns:repeat(7,1fr);gap:4px;margin-bottom:4px}
+.bk-dow span{text-align:center;font-size:.72rem;font-weight:700;color:var(--muted,#6f6a5f);text-transform:uppercase}
+.bk-grid{display:grid;grid-template-columns:repeat(7,1fr);gap:4px}
+.bk-day{aspect-ratio:1/1;display:flex;align-items:center;justify-content:center;font-size:.88rem;border-radius:8px;cursor:pointer;border:1px solid transparent;transition:.12s;user-select:none}
+.bk-day:hover:not(.bk-dis):not(.bk-empty){background:var(--gold-light,#c9a877);color:#fff}
+.bk-day.bk-empty{cursor:default}
+.bk-day.bk-dis{color:#c7c0b2;cursor:not-allowed;text-decoration:line-through}
+.bk-day.bk-in,.bk-day.bk-out{background:var(--green,#2f3d2f);color:#fff;font-weight:700}
+.bk-day.bk-range{background:var(--gold-light,#c9a877);color:#fff;border-radius:0}
+.bk-day.bk-in{border-radius:8px 0 0 8px}
+.bk-day.bk-out{border-radius:0 8px 8px 0}
+.bk-summary{display:flex;align-items:center;justify-content:space-between;gap:10px;background:var(--green,#2f3d2f);color:#fff;border-radius:12px;padding:12px 16px;margin-bottom:16px;font-size:.92rem}
+.bk-summary .bk-nights{font-weight:700;color:var(--gold-light,#c9a877);white-space:nowrap}
+@media(max-width:480px){.bk-day{font-size:.8rem}}
+.zona{background:var(--cream-2,#efe7d6)}
+.zona-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(205px,1fr));gap:20px}
+.zona-card{background:#fff;border-radius:16px;padding:28px 24px;box-shadow:0 18px 44px -28px rgba(38,36,31,.35);display:flex;flex-direction:column}
+.zona-card .znum{font-family:'Fraunces',Georgia,serif;font-size:2.6rem;font-weight:600;line-height:1;color:#cdbb95;margin-bottom:14px}
+.zona-card h4{font-family:'Fraunces',Georgia,serif;font-size:1.2rem;font-weight:600;color:var(--green,#2f3d2f);margin-bottom:10px}
+.zona-card p{color:var(--muted,#6f6a5f);font-size:.92rem;margin:0 0 16px}
+.zona-card .ztag{margin-top:auto;font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;color:var(--gold,#b08d57);font-weight:700}
+@media(max-width:900px){.zona-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:520px){.zona-grid{grid-template-columns:1fr}}
+.io-grid{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+.io-card{background:#fff;border:1px solid var(--cream-2,#efe7d6);border-radius:16px;padding:30px;box-shadow:0 14px 40px -26px rgba(38,36,31,.3)}
+.io-card .ico{font-size:1.8rem;margin-bottom:10px}
+.io-card h3{font-family:'Fraunces',Georgia,serif;font-size:1.3rem;font-weight:600;color:var(--green,#2f3d2f);margin-bottom:8px}
+.io-card p{color:var(--muted,#6f6a5f);font-size:.96rem}
+@media(max-width:680px){.io-grid{grid-template-columns:1fr}}
+.dist-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:16px;max-width:960px;margin:0 auto}
+.dist-card{background:#fff;border:1px solid var(--cream-2,#efe7d6);border-radius:16px;padding:26px 20px;text-align:center;box-shadow:0 14px 40px -28px rgba(38,36,31,.3)}
+.dist-card .ico{font-size:1.9rem;margin-bottom:8px}
+.dist-card b{display:block;font-family:'Fraunces',Georgia,serif;font-size:1.5rem;color:var(--gold,#b08d57);line-height:1.1}
+.dist-card span{display:block;color:var(--muted,#6f6a5f);font-size:.86rem;margin-top:4px}
+.reviews-carousel{position:relative}
+.reviews-grid{display:flex;gap:20px;overflow-x:auto;scroll-snap-type:x mandatory;padding:6px 2px 18px;scroll-behavior:smooth;-webkit-overflow-scrolling:touch}
+.reviews-grid::-webkit-scrollbar{height:7px}
+.reviews-grid::-webkit-scrollbar-track{background:transparent}
+.reviews-grid::-webkit-scrollbar-thumb{background:var(--gold-light,#c9a877);border-radius:10px}
+.reviews-grid .review{flex:0 0 360px;max-width:360px;scroll-snap-align:start}
+.rev-arrow{display:none;position:absolute;top:44%;transform:translateY(-50%);width:46px;height:46px;border-radius:50%;border:none;background:var(--green,#2f3d2f);color:#fff;font-size:1.6rem;line-height:1;cursor:pointer;box-shadow:0 6px 18px -6px rgba(0,0,0,.4);z-index:5;transition:.2s;place-items:center}
+.rev-arrow:hover{background:var(--gold,#b08d57)}
+.rev-prev{left:-12px}.rev-next{right:-12px}
+@media(max-width:480px){.reviews-grid .review{flex:0 0 85%;max-width:85%}}
+.brand{align-items:center}
+.brand .brandlogo{height:46px;width:46px;flex:none;background:linear-gradient(135deg,#2f3d2f,#46583f);border-radius:11px;box-shadow:0 3px 12px rgba(38,36,31,.18);display:flex;align-items:center;justify-content:center;font-family:'Fraunces',Georgia,serif;font-weight:600;color:var(--gold-light,#c9a877);font-size:1.45rem;line-height:1}
+.brand .name{align-self:center}
+.brand .name small{white-space:nowrap;letter-spacing:.2em}
+.langs{display:flex;gap:1px;margin-left:18px;border:1px solid rgba(255,255,255,.45);border-radius:30px;padding:3px;flex:none}
+header.scrolled .langs{border-color:rgba(38,36,31,.22)}
+.langs button{background:none;border:none;cursor:pointer;font-family:'Inter',sans-serif;font-size:.72rem;font-weight:700;letter-spacing:.04em;color:#fff;padding:5px 10px;border-radius:30px;transition:.2s;line-height:1}
+header.scrolled .langs button{color:var(--green,#2f3d2f)}
+.langs button.on{background:var(--gold,#b08d57);color:#fff!important}
+@media(max-width:600px){
+  .brand .brandlogo{height:40px;width:40px;font-size:1.25rem}
+  .brand .name{font-size:1.12rem}
+  .brand .name small{font-size:.52rem;letter-spacing:.12em}
+  .langs{margin-left:10px}
+  .langs button{padding:4px 7px;font-size:.66rem}
+}
+.progress{position:fixed;top:0;left:0;height:3px;width:0;background:linear-gradient(90deg,var(--gold,#b08d57),var(--gold-light,#c9a877));z-index:300;transition:width .1s linear}
+.loader{position:fixed;inset:0;background:#1b2516;z-index:400;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:18px;transition:opacity .7s ease,visibility .7s}
+.loader.done{opacity:0;visibility:hidden}
+.loader .mark{width:74px;height:74px;border-radius:50%;background:#fff;display:grid;place-items:center;animation:bkpulse 1.6s infinite;font-family:'Fraunces',Georgia,serif;font-weight:600;font-size:2.1rem;color:var(--green,#2f3d2f)}
+.loader span{color:#e9d9bd;font-size:.72rem;letter-spacing:.4em;text-transform:uppercase}
+@keyframes bkpulse{0%,100%{transform:scale(1);box-shadow:0 0 0 0 rgba(176,141,87,.5)}50%{transform:scale(1.06);box-shadow:0 0 0 18px rgba(176,141,87,0)}}
+.to-top{position:fixed;right:26px;bottom:26px;width:48px;height:48px;border-radius:50%;background:var(--green,#2f3d2f);color:var(--cream,#f6f1e7);border:none;font-size:1.1rem;cursor:pointer;opacity:0;visibility:hidden;transition:.35s ease;z-index:90;box-shadow:0 16px 44px -30px rgba(35,33,28,.5)}
+.to-top.show{opacity:1;visibility:visible}
+.to-top:hover{background:var(--gold,#b08d57);transform:translateY(-4px)}
+.hero-slides .slide{animation:none;opacity:0;transform:scale(1.06);transition:opacity 1.6s ease}
+.hero-slides .slide.on{opacity:1;animation:bkken 9s linear forwards}
+@keyframes bkken{from{transform:scale(1.06)}to{transform:scale(1.15)}}
+.hero-dots{position:absolute;right:38px;bottom:38px;z-index:3;display:flex;gap:10px}
+.hero-dots button{width:34px;height:4px;border-radius:4px;border:none;background:rgba(255,255,255,.35);cursor:pointer;transition:.3s;padding:0}
+.hero-dots button.on{background:var(--gold-light,#c9a877)}
+.marquee{background:var(--gold,#b08d57);color:#fff;overflow:hidden;padding:14px 0;white-space:nowrap}
+.marquee-track{display:inline-flex;gap:0;animation:bkscrollx 30s linear infinite}
+.marquee span{display:inline-flex;align-items:center;gap:18px;padding:0 18px;font-family:'Fraunces',Georgia,serif;font-size:1.02rem;letter-spacing:.04em}
+.marquee i{font-style:normal;opacity:.65;font-size:.7rem}
+@keyframes bkscrollx{to{transform:translateX(-50%)}}
+.stats-grid{grid-template-columns:repeat(4,1fr)}
+@media(max-width:760px){.stats-grid{grid-template-columns:repeat(2,1fr);gap:24px 10px}}
+.faq-list{max-width:780px;margin:0 auto;display:grid;gap:14px}
+.faq{background:#fff;border:1px solid var(--cream-2,#efe7d6);border-radius:16px;overflow:hidden;transition:.3s}
+.faq summary{list-style:none;display:flex;align-items:center;justify-content:space-between;gap:16px;padding:22px 26px;cursor:pointer;font-weight:600;font-size:1.02rem;color:var(--green,#2f3d2f)}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary .pl{width:30px;height:30px;border-radius:50%;background:var(--cream,#f6f1e7);color:var(--gold,#b08d57);display:grid;place-items:center;font-size:1.2rem;flex:none;transition:.3s ease;font-weight:400}
+.faq[open] summary .pl{transform:rotate(45deg);background:var(--gold,#b08d57);color:#fff}
+.faq .ans{padding:0 26px 24px;color:var(--muted,#6f6a5f);font-size:.96rem}
+.bk-day{position:relative}
+.bk-day.bk-today::after{content:'';position:absolute;bottom:4px;width:4px;height:4px;border-radius:50%;background:var(--gold,#b08d57)}
+.bk-clear{background:none;border:none;color:rgba(255,255,255,.7);font-size:.78rem;cursor:pointer;text-decoration:underline;display:none;font-family:'Inter',sans-serif;padding:0;margin-left:8px}
+.bk-clear.show{display:inline}
+.bk-clear:hover{color:#fff}
+.lb-nav{position:absolute;top:50%;transform:translateY(-50%);width:52px;height:52px;border-radius:50%;border:1.5px solid rgba(255,255,255,.4);background:rgba(255,255,255,.08);color:#fff;font-size:1.5rem;cursor:pointer;transition:.25s;display:grid;place-items:center;z-index:201}
+.lb-nav:hover{background:var(--gold,#b08d57);border-color:var(--gold,#b08d57)}
+.lb-prev{left:26px}.lb-next{right:26px}
+@media(max-width:600px){
+  .hero-dots{right:24px;bottom:24px}
+  .lb-nav{width:42px;height:42px}.lb-prev{left:10px}.lb-next{right:10px}
+}
+</style>
+</head>
+<body>
+
+<div class="loader" id="loader"><div class="mark">V</div><span>Villamada</span></div>
+<div class="progress" id="progress"></div>
+
+<header id="header"><div class="wrap nav">
+  <a href="#inicio" class="brand"><span class="brandlogo">V</span><span class="name">Villamada<small data-i18n="brandSub">Casa Rural</small></span></a>
+  <nav class="menu" id="menu">
+    <a href="#casa" data-i18n="navCasa">La Casa</a>
+    <a href="#galeria" data-i18n="navGaleria">Galería</a>
+    <a href="#opiniones" data-i18n="navOpiniones">Opiniones</a>
+    <a href="#ubicacion" data-i18n="navUbicacion">Ubicación</a>
+    <a href="#reservar" class="btn btn-primary nav-cta" data-i18n="navReservar">Reservar</a>
+  </nav>
+  <div class="langs" id="langs">
+    <button type="button" data-lang="es">ES</button>
+    <button type="button" data-lang="en">EN</button>
+  </div>
+  <button class="burger" id="burger" aria-label="Menú"><span></span><span></span><span></span></button>
+</div></header>
+
+<section class="hero" id="inicio">
+  <div class="hero-slides" id="heroSlides">
+    <div class="slide on" style="background-image:url('img/vm-03.jpg')"></div>
+    <div class="slide" style="background-image:url('img/vm-01.jpg')"></div>
+    <div class="slide" style="background-image:url('img/vm-07.jpg')"></div>
+    <div class="slide" style="background-image:url('img/vm-06.jpg')"></div>
+  </div>
+  <div class="wrap hero-inner">
+    <div class="eyebrow" style="color:var(--gold-light)">El Real de la Jara · Sevilla</div>
+    <h1 data-i18n="heroH1">Tu casa rural en la <em>Sierra Norte</em></h1>
+    <p data-i18n="heroP">Una casa entera para los tuyos, con piscina privada y el encanto de la dehesa sevillana. Desconecta en El Real de la Jara.</p>
+    <div class="hero-cta">
+      <a href="#reservar" class="btn btn-primary" data-i18n="ctaDisp">Consultar disponibilidad</a>
+      <a href="#galeria" class="btn btn-ghost" data-i18n="ctaDescubrir">Descubrir la casa</a>
+    </div>
+    <div class="hero-badges">
+      <div class="hero-badge"><span class="star">★</span> <span data-i18n="badgeRev">5,0/5 · 64 opiniones reales</span></div>
+      <div class="hero-badge" data-i18n="badgePiscina">🏊 Piscina privada</div>
+      <div class="hero-badge" data-i18n="badgePers">👥 Hasta 10 personas</div>
+    </div>
+  </div>
+  <div class="hero-dots" id="heroDots"></div>
+  <div class="scroll-hint" data-i18n="scroll">Desliza<span>↓</span></div>
+</section>
+
+<div class="marquee" aria-hidden="true"><div class="marquee-track" id="marquee"></div></div>
+
+<div class="stats"><div class="wrap stats-grid">
+  <div class="stat"><div class="num" data-target="5" data-decimals="1" data-suffix="★">0</div><div class="lbl" data-i18n="statRating">Valoración en Google</div></div>
+  <div class="stat"><div class="num" data-target="64">0</div><div class="lbl" data-i18n="statReviews">Opiniones reales</div></div>
+  <div class="stat"><div class="num" data-target="10">0</div><div class="lbl" data-i18n="statPers">Personas de capacidad</div></div>
+  <div class="stat"><div class="num" style="font-size:1.8rem" data-i18n="statPuebloN">5 min</div><div class="lbl" data-i18n="statPueblo">Andando al pueblo</div></div>
+</div></div>
+
+<section class="pad" id="casa"><div class="wrap split">
+  <div class="copy reveal">
+    <div class="eyebrow" data-i18n="casaEye">La casa</div>
+    <h2 data-i18n="casaH2">Tu refugio en la dehesa</h2>
+    <p data-i18n="casaP1">Villamada es una casa rural que se alquila completa para un solo grupo. Una casa amplia y luminosa, con su patio, su jardín y su piscina privada, donde desconectar de verdad en pleno corazón de la Sierra Norte de Sevilla.</p>
+    <p data-i18n="casaP2">Con una valoración de 5★ en Google, nuestros huéspedes destacan la limpieza, lo bien equipada que está y el trato cercano de Carmen. Ideal para escapadas en familia o con amigos, hasta 10 personas, a 5 minutos andando del pueblo.</p>
+    <ul class="feature-list">
+      <li><i>✓</i> <span data-i18n="f1">Casa entera para tu grupo</span></li>
+      <li><i>✓</i> <span data-i18n="f2">Piscina privada</span></li>
+      <li><i>✓</i> <span data-i18n="f3">Barbacoa y porche</span></li>
+      <li><i>✓</i> <span data-i18n="f4">Anexo con chimenea</span></li>
+      <li><i>✓</i> <span data-i18n="f5">Totalmente equipada</span></li>
+      <li><i>✓</i> <span data-i18n="f6">WiFi gratuito</span></li>
+      <li><i>✓</i> <span data-i18n="f7">Aparcamiento</span></li>
+    </ul>
+  </div>
+  <div class="imgs reveal">
+    <img src="img/vm-05.jpg" alt="Salón comedor de Villamada Casa Rural">
+    <img class="float" src="img/vm-01.jpg" alt="Fachada y porche de Villamada Casa Rural">
+  </div>
+</div></section>
+
+<section class="pad" id="nosotros"><div class="wrap" style="max-width:800px;text-align:center">
+  <div class="section-head center reveal" style="margin-bottom:24px"><div class="eyebrow" data-i18n="nosEye">Sobre nosotros</div><h2 data-i18n="nosH2">Como en casa</h2></div>
+  <p class="reveal" style="font-size:1.12rem;line-height:1.8;color:var(--muted,#6f6a5f)" data-i18n="nosP">En Villamada queremos que te sientas como en tu propia casa. Carmen, la propietaria, atiende personalmente cada reserva y está pendiente de cualquier detalle para que tu estancia sea perfecta. Una casa cuidada, limpia y con el calor del trato de toda la vida.</p>
+</div></section>
+
+<section class="pad exterior" id="exterior"><div class="wrap">
+  <div class="section-head center reveal"><div class="eyebrow" data-i18n="extEye">El lugar</div><h2 data-i18n="extH2">Un vistazo a Villamada</h2><p data-i18n="extP">Imágenes reales de la casa y su entorno.</p></div>
+  <div class="show-grid reveal">
+        <figure class="big"><img src="img/vm-03.jpg" alt="Piscina privada de Villamada"><figcaption data-i18n="cap1">Piscina privada</figcaption></figure>
+        <figure class=""><img src="img/vm-07.jpg" alt="Porche cubierto al atardecer"><figcaption data-i18n="cap2">Porche para el atardecer</figcaption></figure>
+        <figure class=""><img src="img/vm-06.jpg" alt="Comedor exterior junto a la piscina"><figcaption data-i18n="cap3">Comer al aire libre</figcaption></figure>
+        <figure class=""><img src="img/vm-08.jpg" alt="Jardín con tumbonas"><figcaption data-i18n="cap4">Jardín y descanso</figcaption></figure>
+        <figure class=""><img src="img/vm-09.jpg" alt="Hamaca en el jardín"><figcaption data-i18n="cap5">Cada rincón</figcaption></figure>
+  </div>
+</div></section>
+
+<section class="parallax" style="background-image:url('img/vm-07.jpg')">
+  <div class="pq reveal">
+    <div class="eyebrow" data-i18n="parEye">La experiencia</div>
+    <h2 data-i18n="parH2">Desconecta en la <em>dehesa</em>,<br>a tu ritmo y sin prisas</h2>
+    <a href="#reservar" class="btn btn-primary" data-i18n="parBtn">Quiero vivirlo</a>
+  </div>
+</section>
+
+<section class="pad amen"><div class="wrap">
+  <div class="section-head center reveal"><div class="eyebrow" style="color:var(--gold-light)" data-i18n="servEye">Servicios</div><h2 data-i18n="servH2">Todo preparado para ti</h2><p data-i18n="servP">La casa está equipada para que tu estancia sea cómoda de principio a fin.</p></div>
+  <div class="amen-grid">
+        <div class="amen-card reveal"><div class="ico">🏊</div><h4 data-i18n="s1t">Piscina privada</h4><p data-i18n="s1d">Piscina exterior de uso exclusivo, en el patio, con porche al lado.</p></div>
+        <div class="amen-card reveal"><div class="ico">🔥</div><h4 data-i18n="s2t">Barbacoa</h4><p data-i18n="s2d">Zona de barbacoa para tus comidas y cenas al aire libre.</p></div>
+        <div class="amen-card reveal"><div class="ico">🪵</div><h4 data-i18n="s3t">Chimenea</h4><p data-i18n="s3d">Chimenea de leña en el anexo del patio para las noches de invierno.</p></div>
+        <div class="amen-card reveal"><div class="ico">🧒</div><h4 data-i18n="s4t">Juegos para niños</h4><p data-i18n="s4d">El cuarto del patio cuenta con juegos para los más pequeños.</p></div>
+        <div class="amen-card reveal"><div class="ico">🍳</div><h4 data-i18n="s5t">Cocina equipada</h4><p data-i18n="s5d">Cocina completa con todo lo necesario para cocinar como en casa.</p></div>
+        <div class="amen-card reveal"><div class="ico">📶</div><h4 data-i18n="s6t">WiFi gratuito</h4><p data-i18n="s6d">Conexión a internet en toda la casa.</p></div>
+        <div class="amen-card reveal"><div class="ico">🚗</div><h4 data-i18n="s7t">Aparcamiento</h4><p data-i18n="s7d">Aparcamiento cómodo junto a la casa.</p></div>
+        <div class="amen-card reveal"><div class="ico">❄️</div><h4 data-i18n="s8t">Climatización</h4><p data-i18n="s8d">Preparada para disfrutarla en cualquier época del año.</p></div>
+        <div class="amen-card reveal"><div class="ico">🛏️</div><h4 data-i18n="s9t">Ropa de cama y toallas</h4><p data-i18n="s9d">Casa totalmente equipada, lista para entrar a vivir.</p></div>
+  </div>
+</div></section>
+
+<section class="pad" id="interior"><div class="wrap split">
+  <div class="imgs reveal">
+    <img src="img/vm-02.jpg" alt="Dormitorio amplio de Villamada Casa Rural">
+  </div>
+  <div class="copy reveal">
+    <div class="eyebrow" data-i18n="intEye">La casa por dentro</div>
+    <h2 data-i18n="intH2">Amplia, cuidada y muy acogedora</h2>
+    <p data-i18n="intP">Dormitorios amplios y luminosos, varios cuartos de baño, un salón con TV y zona de comedor, y una cocina totalmente equipada. Todo decorado con gusto y en perfecto estado, pensado para que un grupo grande esté a sus anchas.</p>
+    <ul class="feature-list">
+      <li><i>✓</i> <span data-i18n="if1">Dormitorios amplios</span></li>
+      <li><i>✓</i> <span data-i18n="if2">Varios cuartos de baño</span></li>
+      <li><i>✓</i> <span data-i18n="if3">Salón con TV y comedor</span></li>
+      <li><i>✓</i> <span data-i18n="if4">Anexo en el patio con chimenea</span></li>
+    </ul>
+  </div>
+</div></section>
+
+<section class="pad" id="distribucion"><div class="wrap">
+  <div class="section-head center reveal"><div class="eyebrow" data-i18n="distEye">La casa al completo</div><h2 data-i18n="distH2">Capacidad y distribución</h2><p data-i18n="distP">Toda la casa para tu grupo: dentro y fuera.</p></div>
+  <div class="dist-grid reveal">
+    <div class="dist-card"><div class="ico">👥</div><b data-i18n="d1n">10</b><span data-i18n="d1l">Personas</span></div>
+    <div class="dist-card"><div class="ico">🛏️</div><b data-i18n="d2n">Varios</b><span data-i18n="d2l">Dormitorios</span></div>
+    <div class="dist-card"><div class="ico">🚿</div><b data-i18n="d3n">Varios</b><span data-i18n="d3l">Baños</span></div>
+    <div class="dist-card"><div class="ico">🏊</div><b data-i18n="d4n">Sí</b><span data-i18n="d4l">Piscina privada</span></div>
+    <div class="dist-card"><div class="ico">🏡</div><b data-i18n="d5n">Patio</b><span data-i18n="d5l">y jardín</span></div>
+  </div>
+</div></section>
+
+<section class="pad" id="galeria"><div class="wrap">
+  <div class="section-head center reveal"><div class="eyebrow" data-i18n="galEye">Galería</div><h2 data-i18n="galH2">Mira cada detalle</h2><p data-i18n="galP">Fotografías reales de Villamada Casa Rural.</p></div>
+  <div class="gallery-grid reveal">
+      <img src="img/vm-03.jpg" alt="Piscina privada con porche">
+      <img src="img/vm-01.jpg" alt="Fachada y porche de piedra">
+      <img src="img/vm-06.jpg" alt="Comedor exterior junto a la piscina">
+      <img src="img/vm-07.jpg" alt="Porche cubierto al atardecer">
+      <img src="img/vm-05.jpg" alt="Salón comedor de la casa">
+      <img src="img/vm-02.jpg" alt="Dormitorio con dos camas">
+      <img src="img/vm-04.jpg" alt="Entrada principal de la casa">
+      <img src="img/vm-08.jpg" alt="Jardín con tumbonas bajo el árbol">
+      <img src="img/vm-09.jpg" alt="Hamaca en el jardín">
+  </div>
+</div></section>
+
+<section class="pad" id="opiniones"><div class="wrap">
+  <div class="section-head center reveal"><div class="eyebrow" data-i18n="opEye">Opiniones</div><h2 data-i18n="opH2">Lo que dicen quienes ya han venido</h2></div>
+  <div class="reviews-top reveal">
+    <div class="score-big"><div class="n">5,0</div><div class="stars">★★★★★</div><div class="src" data-i18n="opSrc">en Google · 64 opiniones</div></div>
+  </div>
+  <div class="reviews-carousel reveal">
+    <button type="button" class="rev-arrow rev-prev" id="revPrev" aria-label="Anterior">‹</button>
+    <div class="reviews-grid" id="reviewsTrack">
+      <div class="review"><div class="stars">★★★★★</div><p>“Fin de semana en familia de 10 personas. La casa es preciosa, amplia, y con patio muy coqueto. El anexo del patio es casi otra casita rural adicional, una pasada. Y la dueña, un encanto, eficaz y rápida. ¡De las mejores casas rurales que hemos visitado!”</p><div class="who"><span class="av"><img src="https://lh3.googleusercontent.com/a/ACg8ocJDaSSnOl7trq5HgFlB54WhDmEyZYdpcqQXt3ZQX-YeEjrckQ=s128-c0x00000000-cc-rp-mo-ba3" alt="Pedro Trinidad"></span><div><b>Pedro Trinidad</b><small>★★★★★</small></div></div></div>
+      <div class="review"><div class="stars">★★★★★</div><p>“Nos alojamos 4 personas y la experiencia ha sido de 10. Empezando por el trato y la atención de Carmen, que estuvo pendiente de todo. La casa está absolutamente equipada y tanto las zonas interiores como exteriores son muy acogedoras. El pueblo a 5-6 minutos andando. Sin duda repetiremos. ☺️”</p><div class="who"><span class="av"><img src="https://lh3.googleusercontent.com/a-/ALV-UjUDEpPR6Kp3aRN8ohGflAnQgwH11ONxhnMIYj1zMBeKjAZmjos=s128-c0x00000000-cc-rp-mo" alt="Cristina Cortés Cid"></span><div><b>Cristina Cortés</b><small>★★★★★</small></div></div></div>
+      <div class="review"><div class="stars">★★★★★</div><p>“La casa es perfecta para un viaje en familia o con amigos, para unas 10 personas. Todo en perfecto estado, bien cuidado, y con un trato maravilloso por parte de Carmen. Piscina perfecta, barbacoa, varios cuartos de baño. Lo recomiendo mucho, seguramente repetiremos.”</p><div class="who"><span class="av"><img src="https://lh3.googleusercontent.com/a/ACg8ocI1Pqgr4uStUBi5TwfpTe-gZvO74URkCUv5pfeNywTMJotYkw=s128-c0x00000000-cc-rp-mo" alt="Antonio Jesús Iglesias"></span><div><b>Antonio J. Iglesias</b><small>★★★★★</small></div></div></div>
+      <div class="review"><div class="stars">★★★★★</div><p>“La casa es una pasada. Muy bien equipada y todo muy limpio. Carmen, la propietaria, es muy amable y nos ayudó en todo momento. Si queréis pasar unos días de desconexión y de ensueño, esta es una excelente opción. El pueblo tiene un encanto especial. Volveremos.”</p><div class="who"><span class="av"><img src="https://lh3.googleusercontent.com/a/ACg8ocIPI-LowlF0TLSVbdS43BUWEKmi7XBlZF3SzIpKgumdA6z_hQ=s128-c0x00000000-cc-rp-mo" alt="Marco Antonio Orozco"></span><div><b>Marco A. Orozco</b><small>★★★★★</small></div></div></div>
+      <div class="review"><div class="stars">★★★★★</div><p>“Todo perfecto. La casa es estupenda: la limpieza de 10 y tiene todo lo necesario. Está decorada con gusto, las habitaciones son súper amplias. El cuarto del patio tiene juegos para los peques y una chimenea que es una delicia. Recomendable 100%, y Carmen, estupenda.”</p><div class="who"><span class="av"><img src="https://lh3.googleusercontent.com/a/ACg8ocI9JiEgfdI_sTWiit5HNuOpLb3_1pzvd28pgpMI4LIvxHUR_A=s128-c0x00000000-cc-rp-mo" alt="Esther Vargas"></span><div><b>Esther Vargas</b><small>★★★★★</small></div></div></div>
+    </div>
+    <button type="button" class="rev-arrow rev-next" id="revNext" aria-label="Siguiente">›</button>
+  </div>
+</div></section>
+
+<section class="pad" id="pueblo"><div class="wrap split">
+  <div class="copy reveal">
+    <div class="eyebrow" data-i18n="oroEye">El municipio</div>
+    <h2 data-i18n="oroH2">El Real de la Jara, frontera de Sierra Morena</h2>
+    <p data-i18n="oroP1">El Real de la Jara es un pueblo blanco de la Sierra Norte de Sevilla, en plena dehesa de encinas y alcornoques, en la antigua frontera entre Andalucía y Extremadura. Tranquilidad, cielo limpio y la mejor gastronomía de la sierra: cerdo ibérico, quesos y vino.</p>
+    <p data-i18n="oroP2">Coronado por su castillo medieval del siglo XIV y atravesado por la Vía de la Plata —camino jacobeo y antigua calzada romana—, es puerta de entrada al Parque Natural Sierra Norte de Sevilla, Reserva de la Biosfera. Naturaleza, historia y buena mesa a tu alcance.</p>
+  </div>
+  <div class="imgs reveal">
+    <img src="img/vm-04.jpg" alt="Entrada de Villamada Casa Rural">
+    <img class="float" src="img/vm-08.jpg" alt="Jardín de la casa">
+  </div>
+</div></section>
+
+<section class="pad zona" id="zona"><div class="wrap">
+  <div class="section-head center reveal"><div class="eyebrow" data-i18n="zonaEye">La zona</div><h2 data-i18n="zonaH2">Qué hacer cerca de <em>la casa</em></h2><p data-i18n="zonaP">La Sierra Norte de Sevilla es naturaleza, historia y senderismo a un paso.</p></div>
+  <div class="zona-grid">
+    <div class="zona-card reveal"><div class="znum">01</div><h4 data-i18n="z1t">Parque Natural Sierra Norte</h4><p data-i18n="z1d">Reserva de la Biosfera de dehesas de Sierra Morena: rutas de senderismo, observación de aves y paisajes de encinar para todos los niveles.</p><div class="ztag" data-i18n="z1tag">A las puertas</div></div>
+    <div class="zona-card reveal"><div class="znum">02</div><h4 data-i18n="z2t">Castillo del Real de la Jara</h4><p data-i18n="z2d">Fortaleza medieval del siglo XIV que corona el pueblo, testigo de la antigua frontera entre los reinos de Castilla y Portugal.</p><div class="ztag" data-i18n="z2tag">En el pueblo</div></div>
+    <div class="zona-card reveal"><div class="znum">03</div><h4 data-i18n="z3t">Vía de la Plata</h4><p data-i18n="z3d">El Camino de Santiago a su paso por la sierra: antigua calzada romana y ruta jacobea que cruza el mismo pueblo. Ideal para caminantes y ciclistas.</p><div class="ztag" data-i18n="z3tag">Pasa por el pueblo</div></div>
+    <div class="zona-card reveal"><div class="znum">04</div><h4 data-i18n="z4t">Almadén de la Plata</h4><p data-i18n="z4d">Antiguas canteras de mármol, el Cerro del Hierro y rutas por el corazón del parque natural, a un paso de la casa.</p><div class="ztag" data-i18n="z4tag">~25 min en coche</div></div>
+    <div class="zona-card reveal"><div class="znum">05</div><h4 data-i18n="z5t">Aracena y su Gruta</h4><p data-i18n="z5d">La Gruta de las Maravillas, una de las cuevas más espectaculares de España, y el bonito pueblo de Aracena, ya en la sierra de Huelva.</p><div class="ztag" data-i18n="z5tag">~45 min en coche</div></div>
+    <div class="zona-card reveal"><div class="znum">06</div><h4 data-i18n="z6t">Sevilla capital</h4><p data-i18n="z6d">La Catedral, la Giralda, el Real Alcázar y todo el encanto de la capital andaluza, a poco más de una hora en coche.</p><div class="ztag" data-i18n="z6tag">~1 h en coche</div></div>
+  </div>
+</div></section>
+
+<section class="pad loc" id="ubicacion"><div class="wrap loc-grid">
+  <div class="loc-copy reveal">
+    <div class="eyebrow" style="color:var(--gold-light)" data-i18n="ubiEye">Ubicación</div>
+    <h2 data-i18n="ubiH2">Naturaleza y tranquilidad junto al pueblo</h2>
+    <p data-i18n="ubiP1"><strong>Estamos a apenas 5 minutos andando de El Real de la Jara</strong>, así que tienes el pueblo, sus bares, comercios y servicios a un paso, sin renunciar a la calma y la privacidad de una casa en plena naturaleza.</p>
+    <p data-i18n="ubiP2">Una base perfecta para descubrir la Sierra Norte de Sevilla, la dehesa y todos sus pueblos.</p>
+    <p style="margin-top:10px;font-size:.95rem"><strong style="color:var(--gold-light)" data-i18n="addrLabel">Dirección:</strong> Carretera Santa Olalla, S/N, 41250 El Real de la Jara, Sevilla</p>
+    <a href="https://www.google.com/maps/search/?api=1&query=37.9478962,-6.162178" target="_blank" class="btn btn-primary" style="margin-top:24px" data-i18n="ubiBtn">Abrir en Google Maps</a>
+  </div>
+  <div class="loc-map reveal"><iframe loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=37.9478962,-6.162178&output=embed"></iframe></div>
+</div></section>
+
+<section class="pad" id="checkin"><div class="wrap">
+  <div class="section-head center reveal"><div class="eyebrow" data-i18n="ciEye">Llegadas y salidas</div><h2 data-i18n="ciH2">Check-in y check-out</h2></div>
+  <div class="io-grid">
+    <div class="io-card reveal"><div class="ico">🔑</div><h3 data-i18n="ciInT">Llegadas (Check-in)</h3><p data-i18n="ciInP">Carmen te recibe personalmente y te enseña la casa para que llegues sin preocupaciones. Acordamos la hora de llegada contigo por WhatsApp. Para cualquier cosa, estamos a tu disposición en el teléfono 619 98 01 61.</p></div>
+    <div class="io-card reveal"><div class="ico">🧳</div><h3 data-i18n="ciOutT">Salidas (Check-out)</h3><p data-i18n="ciOutP">Para que todo funcione con comodidad, te pedimos dejar la casa antes de las 12:00 h del mediodía. Si necesitas algo de flexibilidad, coméntanoslo y vemos qué podemos hacer.</p></div>
+  </div>
+</div></section>
+
+<section class="pad" id="faq"><div class="wrap">
+  <div class="section-head center reveal"><div class="eyebrow" data-i18n="faqEye">Preguntas frecuentes</div><h2 data-i18n="faqH2">Resolvemos tus dudas</h2></div>
+  <div class="faq-list reveal">
+    <details class="faq"><summary><span data-i18n="q1">¿Se alquila la casa entera?</span><span class="pl">+</span></summary><div class="ans" data-i18n="a1">Sí, Villamada se alquila completa para un solo grupo. Tendréis la casa, el patio, el jardín y la piscina para vosotros, con capacidad para hasta 10 personas.</div></details>
+    <details class="faq"><summary><span data-i18n="q2">¿La piscina es privada?</span><span class="pl">+</span></summary><div class="ans" data-i18n="a2">Sí, la piscina es de uso exclusivo de la casa, en el patio, con porche y zona de descanso al lado.</div></details>
+    <details class="faq"><summary><span data-i18n="q3">¿Cuántas personas caben?</span><span class="pl">+</span></summary><div class="ans" data-i18n="a3">La casa está preparada para grupos y familias de hasta 10 personas, con varios dormitorios y baños y un anexo en el patio con chimenea y juegos para los niños.</div></details>
+    <details class="faq"><summary><span data-i18n="q4">¿Está cerca del pueblo?</span><span class="pl">+</span></summary><div class="ans" data-i18n="a4">Sí. El Real de la Jara está a apenas 5-6 minutos andando, así que no necesitas el coche para llegar al pueblo, sus bares y comercios.</div></details>
+    <details class="faq"><summary><span data-i18n="q5">¿Se admiten barbacoas?</span><span class="pl">+</span></summary><div class="ans" data-i18n="a5">Sí, la casa cuenta con zona de barbacoa en el patio para que disfrutéis de comidas y cenas al aire libre.</div></details>
+    <details class="faq"><summary><span data-i18n="q6">¿Cómo reservo?</span><span class="pl">+</span></summary><div class="ans" data-i18n="a6">Elige tus fechas en el calendario y envíanos la solicitud por WhatsApp, o llámanos directamente. Carmen te confirma disponibilidad personalmente, sin compromiso.</div></details>
+  </div>
+</div></section>
+
+<section class="pad" id="reservar"><div class="wrap contact-grid">
+  <div class="contact-info reveal">
+    <div class="eyebrow" data-i18n="resEye">Reservas</div>
+    <h2 data-i18n="resH2">Reserva tu estancia</h2>
+    <p data-i18n="resP">Cuéntanos tus fechas y te confirmamos disponibilidad sin compromiso. Carmen atiende personalmente cada solicitud.</p>
+    <ul class="ci-list">
+      <li><div class="ico">📞</div><div><b data-i18n="ciTel">Teléfono</b><a href="tel:+34619980161">+34 619 98 01 61</a></div></li>
+      <li><div class="ico">💬</div><div><b>WhatsApp</b><a href="https://wa.me/34619980161" target="_blank">+34 619 98 01 61</a></div></li>
+      <li><div class="ico">📍</div><div><b data-i18n="ciDir">Dirección</b><span>Carretera Santa Olalla, S/N, 41250 El Real de la Jara, Sevilla</span></div></li>
+    </ul>
+    <a href="https://wa.me/34619980161?text=Hola%2C%20me%20gustar%C3%ADa%20consultar%20disponibilidad%20en%20Villamada%20Casa%20Rural" target="_blank" class="btn btn-wa" data-i18n="btnWa">💬 Reservar por WhatsApp</a>
+  </div>
+  <form class="form reveal" id="bookForm" data-wa="34619980161" data-name="Villamada Casa Rural">
+    <h3 data-i18n="formH3">Reserva tu estancia</h3>
+    <p class="sub" data-i18n="formSub">Elige tus fechas en el calendario y te confirmamos disponibilidad sin compromiso.</p>
+    <div class="bk-cal" id="bkCal">
+      <div class="bk-cal-head">
+        <button type="button" class="bk-nav" id="bkPrev" aria-label="Mes anterior">‹</button>
+        <div class="bk-cal-title" id="bkTitle">—</div>
+        <button type="button" class="bk-nav" id="bkNext" aria-label="Mes siguiente">›</button>
+      </div>
+      <div class="bk-dow" id="bkDow"></div>
+      <div class="bk-grid" id="bkGrid"></div>
+    </div>
+    <div class="bk-summary" id="bkSummary">
+      <div class="bk-sum-dates"><span id="bkInfo">Selecciona tu fecha de entrada</span> <button type="button" class="bk-clear" id="bkClear" data-i18n="_clear">borrar</button></div>
+      <div class="bk-nights" id="bkNights"></div>
+    </div>
+    <input type="hidden" id="entrada"><input type="hidden" id="salida">
+    <div class="field"><label for="nombre" data-i18n="lblNombre">Nombre</label><input type="text" id="nombre" data-i18n-ph="phNombre" placeholder="Tu nombre" required></div>
+    <div class="field"><label for="personas" data-i18n="lblPersonas">Personas</label><select id="personas"><option data-i18n="opt2p">2 personas</option><option data-i18n="opt4p">4 personas</option><option selected data-i18n="opt6p">6 personas</option><option data-i18n="opt8p">8 personas</option><option data-i18n="opt10p">10 personas</option></select></div>
+    <div class="field"><label for="tel" data-i18n="lblTel">Tu teléfono</label><input type="tel" id="tel" placeholder="6XX XXX XXX"></div>
+    <div class="field"><label for="msg" data-i18n="lblMsg">Mensaje (opcional)</label><textarea id="msg" rows="2" data-i18n-ph="phMsg" placeholder="¿Algún detalle que debamos saber?"></textarea></div>
+    <button type="submit" class="btn btn-primary" data-i18n="btnSubmit">Solicitar reserva por WhatsApp</button>
+    <p class="form-note" data-i18n="formNote">Sin compromiso · Te confirmamos disponibilidad el mismo día</p>
+  </form>
+</div></section>
+
+<footer><div class="wrap">
+  <div class="foot-grid">
+    <div class="foot-brand"><div class="name">Villamada Casa Rural</div><p data-i18n="footP">Casa rural completa con piscina privada en El Real de la Jara, Sierra Norte de Sevilla. Naturaleza, confort y trato cercano.</p></div>
+    <div class="foot-col"><h5 data-i18n="footExplora">Explora</h5><a href="#casa" data-i18n="navCasa">La Casa</a><a href="#galeria" data-i18n="navGaleria">Galería</a><a href="#opiniones" data-i18n="navOpiniones">Opiniones</a><a href="#ubicacion" data-i18n="navUbicacion">Ubicación</a></div>
+    <div class="foot-col"><h5 data-i18n="footContacto">Contacto</h5><a href="tel:+34619980161">+34 619 98 01 61</a><span>El Real de la Jara, Sevilla</span></div>
+  </div>
+  <div class="foot-bottom"><span>© 2026 Villamada Casa Rural · El Real de la Jara, Sevilla</span><span>Propuesta de web · G&amp;G Elcano</span></div>
+</div></footer>
+
+<div class="lightbox" id="lightbox">
+  <span class="close" id="lbClose">×</span>
+  <button class="lb-nav lb-prev" id="lbPrev" aria-label="Anterior">‹</button>
+  <img id="lbImg" src="" alt="">
+  <button class="lb-nav lb-next" id="lbNext" aria-label="Siguiente">›</button>
+  <div class="lb-count" id="lbCount"></div>
+</div>
+<button class="to-top" id="toTop" aria-label="Volver arriba">↑</button>
+<script src="../assets/eguzki.js"></script>
+<script>
+(function(){
+  // ---------- Diccionario de idiomas ----------
+  const T={
+    es:{
+      brandSub:`Casa Rural`,
+      navCasa:`La Casa`,navGaleria:`Galería`,navOpiniones:`Opiniones`,navUbicacion:`Ubicación`,navReservar:`Reservar`,
+      heroH1:`Tu casa rural en la <em>Sierra Norte</em>`,
+      heroP:`Una casa entera para los tuyos, con piscina privada y el encanto de la dehesa sevillana. Desconecta en El Real de la Jara.`,
+      ctaDisp:`Consultar disponibilidad`,ctaDescubrir:`Descubrir la casa`,
+      badgeRev:`5,0/5 · 64 opiniones reales`,badgePiscina:`🏊 Piscina privada`,badgePers:`👥 Hasta 10 personas`,scroll:`Desliza<span>↓</span>`,
+      statRating:`Valoración en Google`,statReviews:`Opiniones reales`,statPers:`Personas de capacidad`,statPuebloN:`5 min`,statPueblo:`Andando al pueblo`,
+      casaEye:`La casa`,casaH2:`Tu refugio en la dehesa`,
+      casaP1:`Villamada es una casa rural que se alquila completa para un solo grupo. Una casa amplia y luminosa, con su patio, su jardín y su piscina privada, donde desconectar de verdad en pleno corazón de la Sierra Norte de Sevilla.`,
+      casaP2:`Con una valoración de 5★ en Google, nuestros huéspedes destacan la limpieza, lo bien equipada que está y el trato cercano de Carmen. Ideal para escapadas en familia o con amigos, hasta 10 personas, a 5 minutos andando del pueblo.`,
+      f1:`Casa entera para tu grupo`,f2:`Piscina privada`,f3:`Barbacoa y porche`,f4:`Anexo con chimenea`,f5:`Totalmente equipada`,f6:`WiFi gratuito`,f7:`Aparcamiento`,
+      extEye:`El lugar`,extH2:`Un vistazo a Villamada`,extP:`Imágenes reales de la casa y su entorno.`,
+      cap1:`Piscina privada`,cap2:`Porche para el atardecer`,cap3:`Comer al aire libre`,cap4:`Jardín y descanso`,cap5:`Cada rincón`,
+      parEye:`La experiencia`,parH2:`Desconecta en la <em>dehesa</em>,<br>a tu ritmo y sin prisas`,parBtn:`Quiero vivirlo`,
+      servEye:`Servicios`,servH2:`Todo preparado para ti`,servP:`La casa está equipada para que tu estancia sea cómoda de principio a fin.`,
+      s1t:`Piscina privada`,s1d:`Piscina exterior de uso exclusivo, en el patio, con porche al lado.`,s2t:`Barbacoa`,s2d:`Zona de barbacoa para tus comidas y cenas al aire libre.`,
+      s3t:`Chimenea`,s3d:`Chimenea de leña en el anexo del patio para las noches de invierno.`,s4t:`Juegos para niños`,s4d:`El cuarto del patio cuenta con juegos para los más pequeños.`,
+      s5t:`Cocina equipada`,s5d:`Cocina completa con todo lo necesario para cocinar como en casa.`,s6t:`WiFi gratuito`,s6d:`Conexión a internet en toda la casa.`,
+      s7t:`Aparcamiento`,s7d:`Aparcamiento cómodo junto a la casa.`,s8t:`Climatización`,s8d:`Preparada para disfrutarla en cualquier época del año.`,
+      s9t:`Ropa de cama y toallas`,s9d:`Casa totalmente equipada, lista para entrar a vivir.`,
+      intEye:`La casa por dentro`,intH2:`Amplia, cuidada y muy acogedora`,
+      intP:`Dormitorios amplios y luminosos, varios cuartos de baño, un salón con TV y zona de comedor, y una cocina totalmente equipada. Todo decorado con gusto y en perfecto estado, pensado para que un grupo grande esté a sus anchas.`,
+      if1:`Dormitorios amplios`,if2:`Varios cuartos de baño`,if3:`Salón con TV y comedor`,if4:`Anexo en el patio con chimenea`,
+      distEye:`La casa al completo`,distH2:`Capacidad y distribución`,distP:`Toda la casa para tu grupo: dentro y fuera.`,
+      d1n:`10`,d1l:`Personas`,d2n:`Varios`,d2l:`Dormitorios`,d3n:`Varios`,d3l:`Baños`,d4n:`Sí`,d4l:`Piscina privada`,d5n:`Patio`,d5l:`y jardín`,
+      galEye:`Galería`,galH2:`Mira cada detalle`,galP:`Fotografías reales de Villamada Casa Rural.`,
+      opEye:`Opiniones`,opH2:`Lo que dicen quienes ya han venido`,opSrc:`en Google · 64 opiniones`,
+      zonaEye:`La zona`,zonaH2:`Qué hacer cerca de <em>la casa</em>`,zonaP:`La Sierra Norte de Sevilla es naturaleza, historia y senderismo a un paso.`,
+      z1t:`Parque Natural Sierra Norte`,z1d:`Reserva de la Biosfera de dehesas de Sierra Morena: rutas de senderismo, observación de aves y paisajes de encinar para todos los niveles.`,z1tag:`A las puertas`,
+      z2t:`Castillo del Real de la Jara`,z2d:`Fortaleza medieval del siglo XIV que corona el pueblo, testigo de la antigua frontera entre los reinos de Castilla y Portugal.`,z2tag:`En el pueblo`,
+      z3t:`Vía de la Plata`,z3d:`El Camino de Santiago a su paso por la sierra: antigua calzada romana y ruta jacobea que cruza el mismo pueblo. Ideal para caminantes y ciclistas.`,z3tag:`Pasa por el pueblo`,
+      z4t:`Almadén de la Plata`,z4d:`Antiguas canteras de mármol, el Cerro del Hierro y rutas por el corazón del parque natural, a un paso de la casa.`,z4tag:`~25 min en coche`,
+      z5t:`Aracena y su Gruta`,z5d:`La Gruta de las Maravillas, una de las cuevas más espectaculares de España, y el bonito pueblo de Aracena, ya en la sierra de Huelva.`,z5tag:`~45 min en coche`,
+      z6t:`Sevilla capital`,z6d:`La Catedral, la Giralda, el Real Alcázar y todo el encanto de la capital andaluza, a poco más de una hora en coche.`,z6tag:`~1 h en coche`,
+      ubiEye:`Ubicación`,ubiH2:`Naturaleza y tranquilidad junto al pueblo`,
+      ubiP1:`<strong>Estamos a apenas 5 minutos andando de El Real de la Jara</strong>, así que tienes el pueblo, sus bares, comercios y servicios a un paso, sin renunciar a la calma y la privacidad de una casa en plena naturaleza.`,
+      ubiP2:`Una base perfecta para descubrir la Sierra Norte de Sevilla, la dehesa y todos sus pueblos.`,
+      addrLabel:`Dirección:`,ubiBtn:`Abrir en Google Maps`,
+      nosEye:`Sobre nosotros`,nosH2:`Como en casa`,nosP:`En Villamada queremos que te sientas como en tu propia casa. Carmen, la propietaria, atiende personalmente cada reserva y está pendiente de cualquier detalle para que tu estancia sea perfecta. Una casa cuidada, limpia y con el calor del trato de toda la vida.`,
+      ciEye:`Llegadas y salidas`,ciH2:`Check-in y check-out`,ciInT:`Llegadas (Check-in)`,ciInP:`Carmen te recibe personalmente y te enseña la casa para que llegues sin preocupaciones. Acordamos la hora de llegada contigo por WhatsApp. Para cualquier cosa, estamos a tu disposición en el teléfono 619 98 01 61.`,ciOutT:`Salidas (Check-out)`,ciOutP:`Para que todo funcione con comodidad, te pedimos dejar la casa antes de las 12:00 h del mediodía. Si necesitas algo de flexibilidad, coméntanoslo y vemos qué podemos hacer.`,
+      resEye:`Reservas`,resH2:`Reserva tu estancia`,resP:`Cuéntanos tus fechas y te confirmamos disponibilidad sin compromiso. Carmen atiende personalmente cada solicitud.`,
+      ciTel:`Teléfono`,ciDir:`Dirección`,btnWa:`💬 Reservar por WhatsApp`,
+      formH3:`Reserva tu estancia`,formSub:`Elige tus fechas en el calendario y te confirmamos disponibilidad sin compromiso.`,
+      lblNombre:`Nombre`,phNombre:`Tu nombre`,lblPersonas:`Personas`,
+      opt2p:`2 personas`,opt4p:`4 personas`,opt6p:`6 personas`,opt8p:`8 personas`,opt10p:`10 personas`,
+      lblTel:`Tu teléfono`,lblMsg:`Mensaje (opcional)`,phMsg:`¿Algún detalle que debamos saber?`,btnSubmit:`Solicitar reserva por WhatsApp`,formNote:`Sin compromiso · Te confirmamos disponibilidad el mismo día`,
+      footP:`Casa rural completa con piscina privada en El Real de la Jara, Sierra Norte de Sevilla. Naturaleza, confort y trato cercano.`,footExplora:`Explora`,footContacto:`Contacto`,
+      oroEye:`El municipio`,oroH2:`El Real de la Jara, frontera de Sierra Morena`,oroP1:`El Real de la Jara es un pueblo blanco de la Sierra Norte de Sevilla, en plena dehesa de encinas y alcornoques, en la antigua frontera entre Andalucía y Extremadura. Tranquilidad, cielo limpio y la mejor gastronomía de la sierra: cerdo ibérico, quesos y vino.`,oroP2:`Coronado por su castillo medieval del siglo XIV y atravesado por la Vía de la Plata —camino jacobeo y antigua calzada romana—, es puerta de entrada al Parque Natural Sierra Norte de Sevilla, Reserva de la Biosfera. Naturaleza, historia y buena mesa a tu alcance.`,
+      faqEye:`Preguntas frecuentes`,faqH2:`Resolvemos tus dudas`,
+      q1:`¿Se alquila la casa entera?`,a1:`Sí, Villamada se alquila completa para un solo grupo. Tendréis la casa, el patio, el jardín y la piscina para vosotros, con capacidad para hasta 10 personas.`,
+      q2:`¿La piscina es privada?`,a2:`Sí, la piscina es de uso exclusivo de la casa, en el patio, con porche y zona de descanso al lado.`,
+      q3:`¿Cuántas personas caben?`,a3:`La casa está preparada para grupos y familias de hasta 10 personas, con varios dormitorios y baños y un anexo en el patio con chimenea y juegos para los niños.`,
+      q4:`¿Está cerca del pueblo?`,a4:`Sí. El Real de la Jara está a apenas 5-6 minutos andando, así que no necesitas el coche para llegar al pueblo, sus bares y comercios.`,
+      q5:`¿Se admiten barbacoas?`,a5:`Sí, la casa cuenta con zona de barbacoa en el patio para que disfrutéis de comidas y cenas al aire libre.`,
+      q6:`¿Cómo reservo?`,a6:`Elige tus fechas en el calendario y envíanos la solicitud por WhatsApp, o llámanos directamente. Carmen te confirma disponibilidad personalmente, sin compromiso.`,
+      _selIn:`Selecciona tu fecha de entrada`,_selPre:`Entrada: `,_selPost:` · elige la salida`,_nS:`noche`,_nP:`noches`,_need:`⚠️ Elige fechas de entrada y salida`,_clear:`borrar`,
+      _months:['enero','febrero','marzo','abril','mayo','junio','julio','agosto','septiembre','octubre','noviembre','diciembre'],
+      _mshort:['ene','feb','mar','abr','may','jun','jul','ago','sep','oct','nov','dic'],
+      _dow:['dom','lun','mar','mié','jue','vie','sáb'],_dowhead:['L','M','X','J','V','S','D']
+    },
+    en:{
+      brandSub:`Country House`,
+      navCasa:`The House`,navGaleria:`Gallery`,navOpiniones:`Reviews`,navUbicacion:`Location`,navReservar:`Book`,
+      heroH1:`Your country house in the <em>Sierra Norte</em>`,
+      heroP:`A whole house for your group, with a private pool and all the charm of the Seville dehesa. Switch off in El Real de la Jara.`,
+      ctaDisp:`Check availability`,ctaDescubrir:`Discover the house`,
+      badgeRev:`5.0/5 · 64 real reviews`,badgePiscina:`🏊 Private pool`,badgePers:`👥 Up to 10 guests`,scroll:`Scroll<span>↓</span>`,
+      statRating:`Google rating`,statReviews:`Real reviews`,statPers:`Guest capacity`,statPuebloN:`5 min`,statPueblo:`Walk to the village`,
+      casaEye:`The house`,casaH2:`Your refuge in the dehesa`,
+      casaP1:`Villamada is a country house rented out as a whole to a single group. A spacious, bright house with its own patio, garden and private pool, where you can truly switch off in the heart of the Sierra Norte de Sevilla.`,
+      casaP2:`With a 5★ rating on Google, our guests highlight how clean and well equipped it is and Carmen's warm welcome. Perfect for family or friends' getaways, up to 10 people, a 5-minute walk from the village.`,
+      f1:`Whole house for your group`,f2:`Private pool`,f3:`Barbecue & porch`,f4:`Annex with fireplace`,f5:`Fully equipped`,f6:`Free WiFi`,f7:`Parking`,
+      extEye:`The place`,extH2:`A glimpse of Villamada`,extP:`Real photos of the house and its surroundings.`,
+      cap1:`Private pool`,cap2:`Porch for sunsets`,cap3:`Dining outdoors`,cap4:`Garden & rest`,cap5:`Every corner`,
+      parEye:`The experience`,parH2:`Switch off in the <em>dehesa</em>,<br>at your own pace, no rush`,parBtn:`I want to live it`,
+      servEye:`Services`,servH2:`Everything ready for you`,servP:`The house is equipped so your stay is comfortable from start to finish.`,
+      s1t:`Private pool`,s1d:`Outdoor pool for exclusive use, in the patio, with a porch right next to it.`,s2t:`Barbecue`,s2d:`Barbecue area for your meals and dinners outdoors.`,
+      s3t:`Fireplace`,s3d:`Wood-burning fireplace in the patio annex for winter nights.`,s4t:`Kids' play area`,s4d:`The patio room has games for the little ones.`,
+      s5t:`Equipped kitchen`,s5d:`Full kitchen with everything you need to cook just like at home.`,s6t:`Free WiFi`,s6d:`Internet connection throughout the house.`,
+      s7t:`Parking`,s7d:`Convenient parking next to the house.`,s8t:`Heating & A/C`,s8d:`Ready to enjoy at any time of year.`,
+      s9t:`Linen & towels`,s9d:`Fully equipped house, ready to move in.`,
+      intEye:`Inside the house`,intH2:`Spacious, well kept and very cosy`,
+      intP:`Large, bright bedrooms, several bathrooms, a living room with TV and dining area, and a fully equipped kitchen. Everything tastefully decorated and in perfect condition, designed for a big group to spread out and relax.`,
+      if1:`Spacious bedrooms`,if2:`Several bathrooms`,if3:`Living room with TV & dining`,if4:`Patio annex with fireplace`,
+      distEye:`The whole house`,distH2:`Capacity & layout`,distP:`The whole house for your group: indoors and out.`,
+      d1n:`10`,d1l:`Guests`,d2n:`Several`,d2l:`Bedrooms`,d3n:`Several`,d3l:`Bathrooms`,d4n:`Yes`,d4l:`Private pool`,d5n:`Patio`,d5l:`& garden`,
+      galEye:`Gallery`,galH2:`See every detail`,galP:`Real photos of Villamada Casa Rural.`,
+      opEye:`Reviews`,opH2:`What past guests say`,opSrc:`on Google · 64 reviews`,
+      zonaEye:`The area`,zonaH2:`What to do near <em>the house</em>`,zonaP:`The Sierra Norte de Sevilla is nature, history and hiking, all close by.`,
+      z1t:`Sierra Norte Natural Park`,z1d:`A Biosphere Reserve of Sierra Morena dehesas: hiking trails, birdwatching and holm-oak landscapes for all levels.`,z1tag:`At the doorstep`,
+      z2t:`Castle of El Real de la Jara`,z2d:`A 14th-century medieval fortress crowning the village, witness to the old border between the kingdoms of Castile and Portugal.`,z2tag:`In the village`,
+      z3t:`Vía de la Plata`,z3d:`The Camino de Santiago through the sierra: an old Roman road and pilgrim route crossing the village itself. Great for walkers and cyclists.`,z3tag:`Through the village`,
+      z4t:`Almadén de la Plata`,z4d:`Old marble quarries, the Cerro del Hierro and trails through the heart of the natural park, just a short drive away.`,z4tag:`~25 min by car`,
+      z5t:`Aracena & its Grotto`,z5d:`The Gruta de las Maravillas, one of Spain's most spectacular caves, and the lovely town of Aracena, in the Huelva sierra.`,z5tag:`~45 min by car`,
+      z6t:`Seville city`,z6d:`The Cathedral, the Giralda, the Royal Alcázar and all the charm of the Andalusian capital, just over an hour away by car.`,z6tag:`~1 h by car`,
+      ubiEye:`Location`,ubiH2:`Nature and quiet right by the village`,
+      ubiP1:`<strong>We're just a 5-minute walk from El Real de la Jara</strong>, so you have the village, its bars, shops and services within reach, without giving up the calm and privacy of a house in the middle of nature.`,
+      ubiP2:`A perfect base to explore the Sierra Norte de Sevilla, the dehesa and all its villages.`,
+      addrLabel:`Address:`,ubiBtn:`Open in Google Maps`,
+      nosEye:`About us`,nosH2:`Feel at home`,nosP:`At Villamada we want you to feel like you're in your own home. Carmen, the owner, handles every booking personally and looks after every detail to make your stay perfect. A well-kept, clean house with old-fashioned, heartfelt hospitality.`,
+      ciEye:`Arrivals & departures`,ciH2:`Check-in and check-out`,ciInT:`Arrivals (Check-in)`,ciInP:`Carmen welcomes you personally and shows you around the house so you arrive without a worry. We agree the arrival time with you via WhatsApp. For anything you need, we're at your disposal on 619 98 01 61.`,ciOutT:`Departures (Check-out)`,ciOutP:`So everything runs smoothly, we ask you to leave the house before 12:00 noon. If you need a little flexibility, just let us know and we'll see what we can do.`,
+      resEye:`Booking`,resH2:`Book your stay`,resP:`Tell us your dates and we'll confirm availability with no obligation. Carmen handles every request personally.`,
+      ciTel:`Phone`,ciDir:`Address`,btnWa:`💬 Book via WhatsApp`,
+      formH3:`Book your stay`,formSub:`Pick your dates on the calendar and we'll confirm availability with no obligation.`,
+      lblNombre:`Name`,phNombre:`Your name`,lblPersonas:`Guests`,
+      opt2p:`2 guests`,opt4p:`4 guests`,opt6p:`6 guests`,opt8p:`8 guests`,opt10p:`10 guests`,
+      lblTel:`Your phone`,lblMsg:`Message (optional)`,phMsg:`Anything we should know?`,btnSubmit:`Request booking via WhatsApp`,formNote:`No obligation · We confirm availability the same day`,
+      footP:`A whole country house with a private pool in El Real de la Jara, Sierra Norte de Sevilla. Nature, comfort and a warm welcome.`,footExplora:`Explore`,footContacto:`Contact`,
+      oroEye:`The town`,oroH2:`El Real de la Jara, edge of the Sierra Morena`,oroP1:`El Real de la Jara is a white village in the Sierra Norte de Sevilla, set among dehesas of holm and cork oaks, on the old border between Andalusia and Extremadura. Calm, clear skies and the best food in the sierra: Iberian pork, cheeses and wine.`,oroP2:`Crowned by its 14th-century medieval castle and crossed by the Vía de la Plata —a pilgrim route and old Roman road—, it's the gateway to the Sierra Norte de Sevilla Natural Park, a Biosphere Reserve. Nature, heritage and great food within reach.`,
+      faqEye:`FAQ`,faqH2:`Your questions answered`,
+      q1:`Is the whole house rented out?`,a1:`Yes, Villamada is rented out as a whole to a single group. You'll have the house, patio, garden and pool to yourselves, with capacity for up to 10 people.`,
+      q2:`Is the pool private?`,a2:`Yes, the pool is for the exclusive use of the house, in the patio, with a porch and a relaxing area right next to it.`,
+      q3:`How many people fit?`,a3:`The house is set up for groups and families of up to 10 people, with several bedrooms and bathrooms and a patio annex with a fireplace and games for the kids.`,
+      q4:`Is it close to the village?`,a4:`Yes. El Real de la Jara is just a 5-6 minute walk away, so you don't need the car to reach the village, its bars and shops.`,
+      q5:`Are barbecues allowed?`,a5:`Yes, the house has a barbecue area in the patio so you can enjoy meals and dinners outdoors.`,
+      q6:`How do I book?`,a6:`Pick your dates on the calendar and send us your request via WhatsApp, or call us directly. Carmen confirms availability personally, with no obligation.`,
+      _selIn:`Select your check-in date`,_selPre:`Check-in: `,_selPost:` · choose check-out`,_nS:`night`,_nP:`nights`,_need:`⚠️ Choose check-in and check-out dates`,_clear:`clear`,
+      _months:['January','February','March','April','May','June','July','August','September','October','November','December'],
+      _mshort:['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'],
+      _dow:['Sun','Mon','Tue','Wed','Thu','Fri','Sat'],_dowhead:['M','T','W','T','F','S','S']
+    }
+  };
+
+  let LANG=(localStorage.getItem('vm_lang')||'').toLowerCase();
+  if(!T[LANG])LANG='es';
+
+  function applyStatic(l){
+    document.documentElement.lang=l;
+    document.querySelectorAll('[data-i18n]').forEach(el=>{const v=T[l][el.getAttribute('data-i18n')];if(v!=null)el.innerHTML=v;});
+    document.querySelectorAll('[data-i18n-ph]').forEach(el=>{const v=T[l][el.getAttribute('data-i18n-ph')];if(v!=null)el.placeholder=v;});
+    document.querySelectorAll('#langs button').forEach(b=>b.classList.toggle('on',b.getAttribute('data-lang')===l));
+  }
+
+  // ---------- Calendario ----------
+  const grid=document.getElementById('bkGrid');
+  const titleEl=document.getElementById('bkTitle'),infoEl=document.getElementById('bkInfo'),
+        nightsEl=document.getElementById('bkNights'),prevBtn=document.getElementById('bkPrev'),
+        nextBtn=document.getElementById('bkNext'),entIn=document.getElementById('entrada'),
+        salIn=document.getElementById('salida'),dowHead=document.getElementById('bkDow');
+  const today=new Date();today.setHours(0,0,0,0);
+  let view=new Date(today.getFullYear(),today.getMonth(),1);
+  let checkIn=null,checkOut=null;
+  const L=()=>T[LANG];
+  const iso=d=>`${String(d.getDate()).padStart(2,'0')}/${String(d.getMonth()+1).padStart(2,'0')}/${d.getFullYear()}`;
+  const pretty=d=>`${L()._dow[d.getDay()]} ${d.getDate()} ${L()._mshort[d.getMonth()]}`;
+  const same=(a,b)=>a&&b&&a.getTime()===b.getTime();
+
+  function renderDow(){if(dowHead)dowHead.innerHTML=L()._dowhead.map(x=>`<span>${x}</span>`).join('');}
+  function render(){
+    if(!grid)return;
+    titleEl.textContent=`${L()._months[view.getMonth()]} ${view.getFullYear()}`;
+    prevBtn.disabled=(view.getFullYear()===today.getFullYear()&&view.getMonth()===today.getMonth());
+    grid.innerHTML='';
+    const first=new Date(view.getFullYear(),view.getMonth(),1);
+    const offset=(first.getDay()+6)%7;
+    const daysInMonth=new Date(view.getFullYear(),view.getMonth()+1,0).getDate();
+    for(let i=0;i<offset;i++){const e=document.createElement('div');e.className='bk-day bk-empty';grid.appendChild(e);}
+    for(let d=1;d<=daysInMonth;d++){
+      const cell=document.createElement('div');cell.className='bk-day';cell.textContent=d;
+      const date=new Date(view.getFullYear(),view.getMonth(),d);
+      if(date<today){cell.classList.add('bk-dis');}
+      else{
+        if(same(date,checkIn))cell.classList.add('bk-in');
+        if(same(date,checkOut))cell.classList.add('bk-out');
+        if(checkIn&&checkOut&&date>checkIn&&date<checkOut)cell.classList.add('bk-range');
+        cell.addEventListener('click',()=>pick(date));
+      }
+      grid.appendChild(cell);
+    }
+  }
+  function pick(date){
+    if(!checkIn||(checkIn&&checkOut)){checkIn=date;checkOut=null;}
+    else if(date>checkIn){checkOut=date;}
+    else{checkIn=date;checkOut=null;}
+    sync();render();
+  }
+  function sync(){
+    if(!infoEl)return;
+    if(checkIn&&checkOut){
+      const n=Math.round((checkOut-checkIn)/86400000);
+      infoEl.textContent=`${pretty(checkIn)} → ${pretty(checkOut)}`;
+      nightsEl.textContent=n+' '+(n===1?L()._nS:L()._nP);
+      entIn.value=iso(checkIn);salIn.value=iso(checkOut);
+    }else if(checkIn){
+      infoEl.textContent=`${L()._selPre}${pretty(checkIn)}${L()._selPost}`;
+      nightsEl.textContent='';entIn.value=iso(checkIn);salIn.value='';
+    }else{
+      infoEl.textContent=L()._selIn;
+      nightsEl.textContent='';entIn.value='';salIn.value='';
+    }
+  }
+  if(prevBtn)prevBtn.addEventListener('click',()=>{view=new Date(view.getFullYear(),view.getMonth()-1,1);render();});
+  if(nextBtn)nextBtn.addEventListener('click',()=>{view=new Date(view.getFullYear(),view.getMonth()+1,1);render();});
+
+  const form=document.getElementById('bookForm');
+  if(form)form.addEventListener('submit',e=>{
+    e.preventDefault();
+    if(!checkIn||!checkOut){infoEl.textContent=L()._need;return;}
+    const wa=form.dataset.wa,name=form.dataset.name||'el alojamiento';
+    const g=id=>{const el=document.getElementById(id);return el?el.value:'';};
+    const n=Math.round((checkOut-checkIn)/86400000);
+    let t=`Hola! Quiero reservar en ${name}.%0A%0A`+
+      `👤 ${g('nombre')||'—'}%0A`+
+      `📅 Entrada: ${iso(checkIn)}%0A`+
+      `📅 Salida: ${iso(checkOut)}%0A`+
+      `🌙 Noches: ${n}%0A`+
+      `👥 Personas: ${g('personas')}%0A`+
+      `📞 Tel: ${g('tel')||'—'}`;
+    if(g('msg'))t+=`%0A📝 ${g('msg')}`;
+    window.open(`https://wa.me/${wa}?text=${t}`,'_blank');
+  });
+
+  // ---------- Carrusel de opiniones ----------
+  const track=document.getElementById('reviewsTrack'),rp=document.getElementById('revPrev'),rn=document.getElementById('revNext');
+  if(track&&rp&&rn){
+    const upd=()=>{const ov=(track.scrollWidth-track.clientWidth>8)&&window.innerWidth>700;rp.style.display=rn.style.display=ov?'grid':'none';};
+    rp.addEventListener('click',()=>track.scrollBy({left:-380,behavior:'smooth'}));
+    rn.addEventListener('click',()=>track.scrollBy({left:380,behavior:'smooth'}));
+    window.addEventListener('resize',upd);upd();
+  }
+
+  // ---------- Cambio de idioma ----------
+  function setLang(l){if(!T[l])return;LANG=l;try{localStorage.setItem('vm_lang',l);}catch(e){}applyStatic(l);renderDow();render();sync();}
+  document.querySelectorAll('#langs button').forEach(b=>b.addEventListener('click',()=>setLang(b.getAttribute('data-lang'))));
+
+  // ---------- Init ----------
+  applyStatic(LANG);renderDow();render();sync();
+})();
+</script>
+<script>
+/* Mejoras visuales: marquee, hero, progreso, to-top, lightbox nav */
+(function(){
+  // Marquee
+  var mq=document.getElementById('marquee');
+  if(mq){
+    var items=['Villamada Casa Rural','El Real de la Jara','Piscina privada','Hasta 10 personas','Sierra Norte de Sevilla','5★ en Google','Casa entera para tu grupo'];
+    var one=items.map(function(t){return '<span>'+t+'<i>✦</i></span>';}).join('');
+    mq.innerHTML=one+one;
+  }
+  // Hero slides + dots
+  var slides=[].slice.call(document.querySelectorAll('#heroSlides .slide'));
+  var dotsWrap=document.getElementById('heroDots');
+  if(slides.length&&dotsWrap){
+    var cur=0;
+    slides.forEach(function(s,i){
+      var b=document.createElement('button');b.className=i===0?'on':'';
+      b.addEventListener('click',function(){go(i);});dotsWrap.appendChild(b);
+    });
+    var dots=[].slice.call(dotsWrap.children);
+    function go(n){
+      slides[cur].classList.remove('on');dots[cur].classList.remove('on');
+      cur=n;slides[cur].classList.add('on');dots[cur].classList.add('on');
+    }
+    setInterval(function(){go((cur+1)%slides.length);},6000);
+  }
+  // Progress bar
+  var pg=document.getElementById('progress');
+  if(pg)addEventListener('scroll',function(){
+    var h=document.documentElement,max=h.scrollHeight-h.clientHeight;
+    pg.style.width=(max>0?(h.scrollTop/max*100):0)+'%';
+  });
+  // To-top
+  var tt=document.getElementById('toTop');
+  if(tt){
+    addEventListener('scroll',function(){tt.classList.toggle('show',scrollY>600);});
+    tt.addEventListener('click',function(){scrollTo({top:0,behavior:'smooth'});});
+  }
+  // Lightbox prev/next sobre la galería
+  var lb=document.getElementById('lightbox'),lbImg=document.getElementById('lbImg'),
+      lbPrev=document.getElementById('lbPrev'),lbNext=document.getElementById('lbNext'),
+      lbCount=document.getElementById('lbCount');
+  var gimgs=[].slice.call(document.querySelectorAll('.gallery-grid img')),idx=0;
+  function show(i){idx=(i+gimgs.length)%gimgs.length;lbImg.src=gimgs[idx].src;if(lbCount)lbCount.textContent=(idx+1)+' / '+gimgs.length;}
+  gimgs.forEach(function(im,i){im.addEventListener('click',function(){show(i);});});
+  if(lbPrev)lbPrev.addEventListener('click',function(e){e.stopPropagation();show(idx-1);});
+  if(lbNext)lbNext.addEventListener('click',function(e){e.stopPropagation();show(idx+1);});
+  addEventListener('keydown',function(e){
+    if(!lb||!lb.classList.contains('open'))return;
+    if(e.key==='ArrowLeft')show(idx-1);else if(e.key==='ArrowRight')show(idx+1);else if(e.key==='Escape')lb.classList.remove('open');
+  });
+})();
+</script>
+<script>
+/* Cierre del loader — independiente, a prueba de errores del resto del JS */
+(function(){
+  var l=document.getElementById('loader');if(!l)return;
+  var hide=function(){l.classList.add('done');setTimeout(function(){if(l&&l.parentNode)l.style.display='none';},800);};
+  if(document.readyState==='complete'){hide();}
+  else{window.addEventListener('load',hide);}
+  setTimeout(hide,3500);
+})();
+</script>
+</body>
+</html>
