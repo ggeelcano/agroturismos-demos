@@ -767,5 +767,16 @@ header.scrolled .langs button{color:var(--green,#2f3d2f)}
   applyStatic(LANG);renderDow();render();sync();
 })();
 </script>
+<script>
+/* Cierre del loader — independiente, a prueba de errores del resto del JS */
+(function(){
+  var l=document.getElementById('loader');if(!l)return;
+  var hide=function(){l.classList.add('done');setTimeout(function(){if(l&&l.parentNode)l.style.display='none';},800);};
+  if(document.readyState==='complete'){hide();}
+  else{window.addEventListener('load',hide);}
+  /* Fallback duro: pase lo que pase, fuera el loader a los 3,5s */
+  setTimeout(hide,3500);
+})();
+</script>
 </body>
 </html>
