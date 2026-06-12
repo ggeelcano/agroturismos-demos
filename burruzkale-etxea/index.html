@@ -5,7 +5,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Burruzkale Etxea · Habitaciones turísticas en Orozko, Bizkaia</title>
 <meta name="description" content="Burruzkale Etxea, habitaciones turísticas en Orozko (Bizkaia). 4.8★ con 57 opiniones. Naturaleza, descanso y reserva directa por WhatsApp.">
+<link rel="canonical" href="https://ggeelcano.github.io/agroturismos-demos/burruzkale-etxea/">
 <meta property="og:type" content="website">
+<meta property="og:url" content="https://ggeelcano.github.io/agroturismos-demos/burruzkale-etxea/">
 <meta property="og:title" content="Burruzkale Etxea · Orozko, Bizkaia">
 <meta property="og:description" content="Habitaciones turísticas en Orozko, Bizkaia. 4.8★ en Google.">
 <meta property="og:image" content="https://lh3.googleusercontent.com/place-photos/AJRVUZMMnPRa8pVyZxCHRaLTQeGeiuflZWkoppxCC7B5MsTtTxKG6Px0ZljMOneyt6KjAfL5VBxjhm95sAyevLV_yiviGszn9R0xXZR-O6DOIj67P-CShMwjBWT1sXVkYeMFf1wftNzfl10pWASqIQ=s4800-w1200">
@@ -13,6 +15,41 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,400..600&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../assets/eguzki.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LodgingBusiness",
+  "name": "Burruzkale Etxea",
+  "description": "Habitaciones turísticas en el centro de Orozko (Bizkaia), a las puertas del Parque Natural de Gorbeia.",
+  "url": "https://ggeelcano.github.io/agroturismos-demos/burruzkale-etxea/",
+  "image": "https://ggeelcano.github.io/agroturismos-demos/burruzkale-etxea/img/bk-01.jpg",
+  "telephone": "+34618129255",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Burruzkale Kalea, 10",
+    "addressLocality": "Orozko",
+    "addressRegion": "Bizkaia",
+    "postalCode": "48410",
+    "addressCountry": "ES"
+  },
+  "geo": { "@type": "GeoCoordinates", "latitude": 43.1062168, "longitude": -2.9131166 },
+  "aggregateRating": { "@type": "AggregateRating", "ratingValue": "4.8", "reviewCount": "57" }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {"@type":"Question","name":"¿Cómo reservo una habitación?","acceptedAnswer":{"@type":"Answer","text":"Elige tus fechas en el calendario de la sección de reservas y envíanos la solicitud por WhatsApp, o llámanos directamente. Te confirmamos disponibilidad el mismo día, sin compromiso."}},
+    {"@type":"Question","name":"¿Las habitaciones tienen baño privado?","acceptedAnswer":{"@type":"Answer","text":"Sí, todas nuestras habitaciones disponen de baño privado completamente reformado, con secador y amenities ecológicos."}},
+    {"@type":"Question","name":"¿Hay aparcamiento?","acceptedAnswer":{"@type":"Answer","text":"Sí, dispones de aparcamiento junto a la casa, muy cómodo para llegar con el equipaje o con las bicis."}},
+    {"@type":"Question","name":"¿Puedo desayunar o tomar café en la casa?","acceptedAnswer":{"@type":"Answer","text":"En la zona común tienes cafetera Nespresso con cápsulas para todos los clientes y microondas. Además, en tu habitación cuentas con hervidor de agua, infusiones y nevera."}},
+    {"@type":"Question","name":"¿Es buena base para hacer rutas por el Gorbeia?","acceptedAnswer":{"@type":"Answer","text":"Inmejorable. Estamos en el valle de Orozko, una de las principales puertas de entrada al Parque Natural del Gorbeia y al macizo de Itxina, con rutas para todos los niveles."}},
+    {"@type":"Question","name":"¿A qué hora puedo hacer el check-in?","acceptedAnswer":{"@type":"Answer","text":"Contamos con auto check-in: te enviamos todas las indicaciones por WhatsApp el mismo día de tu llegada. El check-out es antes de las 12:00 del mediodía."}}
+  ]
+}
+</script>
 <style>
 .bk-cal{background:var(--cream,#f6f1e7);border:1px solid var(--cream-2,#efe7d6);border-radius:14px;padding:14px;margin-bottom:14px}
 .bk-cal-head{display:flex;align-items:center;justify-content:space-between;margin-bottom:10px}
@@ -90,9 +127,55 @@ header.scrolled .langs button{color:var(--green,#2f3d2f)}
   .langs{margin-left:10px}
   .langs button{padding:4px 7px;font-size:.66rem}
 }
+.progress{position:fixed;top:0;left:0;height:3px;width:0;background:linear-gradient(90deg,var(--gold,#b08d57),var(--gold-light,#c9a877));z-index:300;transition:width .1s linear}
+.loader{position:fixed;inset:0;background:#1b2516;z-index:400;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:18px;transition:opacity .7s ease,visibility .7s}
+.loader.done{opacity:0;visibility:hidden}
+.loader .mark{width:74px;height:74px;border-radius:50%;background:#fff;display:grid;place-items:center;animation:bkpulse 1.6s infinite;overflow:hidden}
+.loader .mark img{width:54px;height:54px;object-fit:contain}
+.loader span{color:#e9d9bd;font-size:.72rem;letter-spacing:.4em;text-transform:uppercase}
+@keyframes bkpulse{0%,100%{transform:scale(1);box-shadow:0 0 0 0 rgba(176,141,87,.5)}50%{transform:scale(1.06);box-shadow:0 0 0 18px rgba(176,141,87,0)}}
+.to-top{position:fixed;right:26px;bottom:26px;width:48px;height:48px;border-radius:50%;background:var(--green,#2f3d2f);color:var(--cream,#f6f1e7);border:none;font-size:1.1rem;cursor:pointer;opacity:0;visibility:hidden;transition:.35s ease;z-index:90;box-shadow:0 16px 44px -30px rgba(35,33,28,.5)}
+.to-top.show{opacity:1;visibility:visible}
+.to-top:hover{background:var(--gold,#b08d57);transform:translateY(-4px)}
+.hero-slides .slide{animation:none;opacity:0;transform:scale(1.06);transition:opacity 1.6s ease}
+.hero-slides .slide.on{opacity:1;animation:bkken 9s linear forwards}
+@keyframes bkken{from{transform:scale(1.06)}to{transform:scale(1.15)}}
+.hero-dots{position:absolute;right:38px;bottom:38px;z-index:3;display:flex;gap:10px}
+.hero-dots button{width:34px;height:4px;border-radius:4px;border:none;background:rgba(255,255,255,.35);cursor:pointer;transition:.3s;padding:0}
+.hero-dots button.on{background:var(--gold-light,#c9a877)}
+.marquee{background:var(--gold,#b08d57);color:#fff;overflow:hidden;padding:14px 0;white-space:nowrap}
+.marquee-track{display:inline-flex;gap:0;animation:bkscrollx 30s linear infinite}
+.marquee span{display:inline-flex;align-items:center;gap:18px;padding:0 18px;font-family:'Fraunces',Georgia,serif;font-size:1.02rem;letter-spacing:.04em}
+.marquee i{font-style:normal;opacity:.65;font-size:.7rem}
+@keyframes bkscrollx{to{transform:translateX(-50%)}}
+.stats-grid{grid-template-columns:repeat(4,1fr)}
+@media(max-width:760px){.stats-grid{grid-template-columns:repeat(2,1fr);gap:24px 10px}}
+.faq-list{max-width:780px;margin:0 auto;display:grid;gap:14px}
+.faq{background:#fff;border:1px solid var(--cream-2,#efe7d6);border-radius:16px;overflow:hidden;transition:.3s}
+.faq summary{list-style:none;display:flex;align-items:center;justify-content:space-between;gap:16px;padding:22px 26px;cursor:pointer;font-weight:600;font-size:1.02rem;color:var(--green,#2f3d2f)}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary .pl{width:30px;height:30px;border-radius:50%;background:var(--cream,#f6f1e7);color:var(--gold,#b08d57);display:grid;place-items:center;font-size:1.2rem;flex:none;transition:.3s ease;font-weight:400}
+.faq[open] summary .pl{transform:rotate(45deg);background:var(--gold,#b08d57);color:#fff}
+.faq .ans{padding:0 26px 24px;color:var(--muted,#6f6a5f);font-size:.96rem}
+.bk-day{position:relative}
+.bk-day.bk-today::after{content:'';position:absolute;bottom:4px;width:4px;height:4px;border-radius:50%;background:var(--gold,#b08d57)}
+.bk-clear{background:none;border:none;color:rgba(255,255,255,.7);font-size:.78rem;cursor:pointer;text-decoration:underline;display:none;font-family:'Inter',sans-serif;padding:0;margin-left:8px}
+.bk-clear.show{display:inline}
+.bk-clear:hover{color:#fff}
+.lb-nav{position:absolute;top:50%;transform:translateY(-50%);width:52px;height:52px;border-radius:50%;border:1.5px solid rgba(255,255,255,.4);background:rgba(255,255,255,.08);color:#fff;font-size:1.5rem;cursor:pointer;transition:.25s;display:grid;place-items:center;z-index:201}
+.lb-nav:hover{background:var(--gold,#b08d57);border-color:var(--gold,#b08d57)}
+.lb-prev{left:26px}.lb-next{right:26px}
+.lb-count{position:absolute;bottom:26px;left:50%;transform:translateX(-50%);color:rgba(255,255,255,.75);font-size:.85rem;letter-spacing:.14em}
+@media(max-width:600px){
+  .hero-dots{right:24px;bottom:24px}
+  .lb-nav{width:42px;height:42px}.lb-prev{left:10px}.lb-next{right:10px}
+}
 </style>
 </head>
 <body>
+
+<div class="loader" id="loader"><div class="mark"><img src="img/logo-mark.png" alt="Burruzkale Etxea"></div><span>Burruzkale Etxea</span></div>
+<div class="progress" id="progress"></div>
 
 <header id="header"><div class="wrap nav">
   <a href="#inicio" class="brand"><img class="brandlogo" src="img/logo-mark.png" alt="Burruzkale Etxea"><span class="name">Burruzkale Etxea<small data-i18n="brandSub">Habitaciones turísticas</small></span></a>
@@ -112,11 +195,11 @@ header.scrolled .langs button{color:var(--green,#2f3d2f)}
 </div></header>
 
 <section class="hero" id="inicio">
-  <div class="hero-slides">
-    <div class="slide" style="background-image:url('https://lh3.googleusercontent.com/place-photos/AJRVUZMMnPRa8pVyZxCHRaLTQeGeiuflZWkoppxCC7B5MsTtTxKG6Px0ZljMOneyt6KjAfL5VBxjhm95sAyevLV_yiviGszn9R0xXZR-O6DOIj67P-CShMwjBWT1sXVkYeMFf1wftNzfl10pWASqIQ=s4800-w1920');animation-delay:0s"></div>
-    <div class="slide" style="background-image:url('https://lh3.googleusercontent.com/place-photos/AJRVUZOnB2oPPto6vrHtNZBSpZzbm2Fm-m_nemfhVDLtMDi917x_gRLw_KSQfHBhyBxNZXt5ECXhSvfwD88E0_P2ezPN49o3ehSOl3SZoN6VuKDjSuPzkkB9ZpWVdpFM6_XiD7MvI3hZn2y1ahPBIA=s4800-w1920');animation-delay:6s"></div>
-    <div class="slide" style="background-image:url('https://lh3.googleusercontent.com/place-photos/AJRVUZMGs6SbeiM9KoAjyuCsoo-a2qy2XpUtiSw_Sgt1LcHvgziQCe0pxeo7hT_G5M3sOxNyEGGxD_9UilUNXejNnZm-VwySpMKsn8VYc6XxCyl79Za_1iXYEd4fTbfp7Vs1_ijmy29vPmZnTuSMLg=s4800-w1920');animation-delay:12s"></div>
-    <div class="slide" style="background-image:url('https://lh3.googleusercontent.com/place-photos/AJRVUZOXZtYzx33ZUxbn88lzbD_bBmk25Zfn7KOBS7YH9AhpLdu7ymiCd_wyP0ni731ALuLZP5vgVvTQs80ynEqet_o2bmGqOE1euofkl51UNM33jmFbUA-TL0vs_pKy7zdn91jMh99noHKyjHrcrKE=s4800-w1920');animation-delay:18s"></div>
+  <div class="hero-slides" id="heroSlides">
+    <div class="slide on" style="background-image:url('https://lh3.googleusercontent.com/place-photos/AJRVUZMMnPRa8pVyZxCHRaLTQeGeiuflZWkoppxCC7B5MsTtTxKG6Px0ZljMOneyt6KjAfL5VBxjhm95sAyevLV_yiviGszn9R0xXZR-O6DOIj67P-CShMwjBWT1sXVkYeMFf1wftNzfl10pWASqIQ=s4800-w1920')"></div>
+    <div class="slide" style="background-image:url('https://lh3.googleusercontent.com/place-photos/AJRVUZOnB2oPPto6vrHtNZBSpZzbm2Fm-m_nemfhVDLtMDi917x_gRLw_KSQfHBhyBxNZXt5ECXhSvfwD88E0_P2ezPN49o3ehSOl3SZoN6VuKDjSuPzkkB9ZpWVdpFM6_XiD7MvI3hZn2y1ahPBIA=s4800-w1920')"></div>
+    <div class="slide" style="background-image:url('https://lh3.googleusercontent.com/place-photos/AJRVUZMGs6SbeiM9KoAjyuCsoo-a2qy2XpUtiSw_Sgt1LcHvgziQCe0pxeo7hT_G5M3sOxNyEGGxD_9UilUNXejNnZm-VwySpMKsn8VYc6XxCyl79Za_1iXYEd4fTbfp7Vs1_ijmy29vPmZnTuSMLg=s4800-w1920')"></div>
+    <div class="slide" style="background-image:url('https://lh3.googleusercontent.com/place-photos/AJRVUZOXZtYzx33ZUxbn88lzbD_bBmk25Zfn7KOBS7YH9AhpLdu7ymiCd_wyP0ni731ALuLZP5vgVvTQs80ynEqet_o2bmGqOE1euofkl51UNM33jmFbUA-TL0vs_pKy7zdn91jMh99noHKyjHrcrKE=s4800-w1920')"></div>
   </div>
   <div class="wrap hero-inner">
     <div class="eyebrow" style="color:var(--gold-light)">Orozko · Bizkaia</div>
@@ -132,13 +215,17 @@ header.scrolled .langs button{color:var(--green,#2f3d2f)}
       <div class="hero-badge" data-i18n="badgeWa">💬 Reserva directa por WhatsApp</div>
     </div>
   </div>
+  <div class="hero-dots" id="heroDots"></div>
   <div class="scroll-hint" data-i18n="scroll">Desliza<span>↓</span></div>
 </section>
+
+<div class="marquee" aria-hidden="true"><div class="marquee-track" id="marquee"></div></div>
 
 <div class="stats"><div class="wrap stats-grid">
   <div class="stat"><div class="num" data-target="4.8" data-decimals="1" data-suffix="★">0</div><div class="lbl" data-i18n="statRating">Valoración en Google</div></div>
   <div class="stat"><div class="num" data-target="57">0</div><div class="lbl" data-i18n="statReviews">Opiniones reales</div></div>
-  <div class="stat"><div class="num" style="font-size:1.7rem">Orozko</div><div class="lbl">Bizkaia</div></div>
+  <div class="stat"><div class="num" data-target="5">0</div><div class="lbl" data-i18n="statRooms">Habitaciones con baño privado</div></div>
+  <div class="stat"><div class="num" style="font-size:1.8rem">20 min</div><div class="lbl" data-i18n="statBilbao">De Bilbao</div></div>
 </div></div>
 
 <section class="pad" id="casa"><div class="wrap split">
@@ -244,9 +331,9 @@ header.scrolled .langs button{color:var(--green,#2f3d2f)}
   <div class="reviews-carousel reveal">
     <button type="button" class="rev-arrow rev-prev" id="revPrev" aria-label="Anterior">‹</button>
     <div class="reviews-grid" id="reviewsTrack">
-      <div class="review"><div class="stars">★★★★★</div><p>“Fuimos este fin de semana y hemos estado súper a gusto. El pueblo de Orozko es muy bonito y la casa está muy bien situada. La habitación amplia y cómoda, el colchón muy bueno y el baño muy completo. Detalles como agua y pastitas, y cafetera a la entrada. Se nota que la dueña es muy detallista. ¡Repetiremos seguro!”</p><div class="who"><span class="av"><img src="https://lh3.googleusercontent.com/a/ACg8ocKAzFSJrvqo1y2WXuuRd1Nknm8CdusOPUwf6sVj1cp4cpxc1w=s128-c0x00000000-cc-rp-mo" alt="Marian Bezanilla"></span><div><b>Marian Bezanilla</b><small>★★★★★</small></div></div></div>
-      <div class="review"><div class="stars">★★★★★</div><p>“Este hospedaje tiene todas las comodidades: habitación amplia, ambiente rústico, silencioso y con una atmósfera excelente. El anfitrión muy amable, siempre presto a ayudar. Buena iluminación y ubicación. Definitivamente volvería.”</p><div class="who"><span class="av"><img src="https://lh3.googleusercontent.com/a-/ALV-UjXdub-5NfK87cHgW3OcS3ahGwmkbZ5IzQV_KZHJmYzev4wrLU1rLw=s128-c0x00000000-cc-rp-mo-ba4" alt="Mauricio Enriquez"></span><div><b>Mauricio Enriquez</b><small>★★★★★</small></div></div></div>
-      <div class="review"><div class="stars">★★★★★</div><p>“Habitación amplia y con todos los detalles: nevera, cafetera e infusiones con bombones en la recepción y agua de cortesía. Buenas almohadas y cama cómoda. Todo reformado.”</p><div class="who"><span class="av"><img src="https://lh3.googleusercontent.com/a/ACg8ocJHqLdjK0v8WdQpOl_skCghiESeR0dJ7tpQTcGLasY9g4aZgw=s128-c0x00000000-cc-rp-mo-ba2" alt="Carol Obiols García"></span><div><b>Carol Obiols García</b><small>★★★★★</small></div></div></div>
+      <div class="review"><div class="stars">★★★★★</div><p>“Fuimos este fin de semana y hemos estado súper a gusto. El pueblo de Orozko es muy bonito y la casa está muy bien situada. La habitación amplia y cómoda, el colchón muy bueno y el baño muy completo. Detalles como agua y pastitas, y cafetera a la entrada. Se nota que la dueña es muy detallista. ¡Repetiremos seguro!”</p><div class="who"><span class="av"><img src="https://lh3.googleusercontent.com/a/ACg8ocKAzFSJrvqo1y2WXuuRd1Nknm8CdusOPUwf6sVj1cp4cpxc1w=s128-c0x00000000-cc-rp-mo" alt="Marian Bezanilla"></span><div><b>M. Bezanilla</b><small>★★★★★</small></div></div></div>
+      <div class="review"><div class="stars">★★★★★</div><p>“Este hospedaje tiene todas las comodidades: habitación amplia, ambiente rústico, silencioso y con una atmósfera excelente. El anfitrión muy amable, siempre presto a ayudar. Buena iluminación y ubicación. Definitivamente volvería.”</p><div class="who"><span class="av"><img src="https://lh3.googleusercontent.com/a-/ALV-UjXdub-5NfK87cHgW3OcS3ahGwmkbZ5IzQV_KZHJmYzev4wrLU1rLw=s128-c0x00000000-cc-rp-mo-ba4" alt="Mauricio Enriquez"></span><div><b>M. Enriquez</b><small>★★★★★</small></div></div></div>
+      <div class="review"><div class="stars">★★★★★</div><p>“Habitación amplia y con todos los detalles: nevera, cafetera e infusiones con bombones en la recepción y agua de cortesía. Buenas almohadas y cama cómoda. Todo reformado.”</p><div class="who"><span class="av"><img src="https://lh3.googleusercontent.com/a/ACg8ocJHqLdjK0v8WdQpOl_skCghiESeR0dJ7tpQTcGLasY9g4aZgw=s128-c0x00000000-cc-rp-mo-ba2" alt="Carol Obiols García"></span><div><b>C. Obiols García</b><small>★★★★★</small></div></div></div>
     </div>
     <button type="button" class="rev-arrow rev-next" id="revNext" aria-label="Siguiente">›</button>
   </div>
@@ -321,6 +408,18 @@ header.scrolled .langs button{color:var(--green,#2f3d2f)}
   </div>
 </div></section>
 
+<section class="pad" id="faq"><div class="wrap">
+  <div class="section-head center reveal"><div class="eyebrow" data-i18n="faqEye">Preguntas frecuentes</div><h2 data-i18n="faqH2">Resolvemos tus dudas</h2></div>
+  <div class="faq-list reveal">
+    <details class="faq"><summary><span data-i18n="q1">¿Cómo reservo una habitación?</span><span class="pl">+</span></summary><div class="ans" data-i18n="a1">Elige tus fechas en el calendario de la sección de reservas y envíanos la solicitud por WhatsApp, o llámanos directamente. Te confirmamos disponibilidad el mismo día, sin compromiso.</div></details>
+    <details class="faq"><summary><span data-i18n="q2">¿Las habitaciones tienen baño privado?</span><span class="pl">+</span></summary><div class="ans" data-i18n="a2">Sí, todas nuestras habitaciones disponen de baño privado completamente reformado, con secador y amenities ecológicos.</div></details>
+    <details class="faq"><summary><span data-i18n="q3">¿Hay aparcamiento?</span><span class="pl">+</span></summary><div class="ans" data-i18n="a3">Sí, dispones de aparcamiento junto a la casa, muy cómodo para llegar con el equipaje o con las bicis.</div></details>
+    <details class="faq"><summary><span data-i18n="q4">¿Puedo desayunar o tomar café en la casa?</span><span class="pl">+</span></summary><div class="ans" data-i18n="a4">En la zona común tienes cafetera Nespresso con cápsulas para todos los clientes y microondas. Además, en tu habitación cuentas con hervidor de agua, infusiones y nevera.</div></details>
+    <details class="faq"><summary><span data-i18n="q5">¿Es buena base para hacer rutas por el Gorbeia?</span><span class="pl">+</span></summary><div class="ans" data-i18n="a5">Inmejorable. Estamos en el valle de Orozko, una de las principales puertas de entrada al Parque Natural del Gorbeia y al macizo de Itxina, con rutas para todos los niveles.</div></details>
+    <details class="faq"><summary><span data-i18n="q6">¿A qué hora puedo hacer el check-in?</span><span class="pl">+</span></summary><div class="ans" data-i18n="a6">Contamos con auto check-in: te enviamos todas las indicaciones por WhatsApp el mismo día de tu llegada. El check-out es antes de las 12:00 del mediodía.</div></details>
+  </div>
+</div></section>
+
 <section class="pad" id="reservar"><div class="wrap contact-grid">
   <div class="contact-info reveal">
     <div class="eyebrow" data-i18n="resEye">Reservas</div>
@@ -346,7 +445,7 @@ header.scrolled .langs button{color:var(--green,#2f3d2f)}
       <div class="bk-grid" id="bkGrid"></div>
     </div>
     <div class="bk-summary" id="bkSummary">
-      <div class="bk-sum-dates"><span id="bkInfo">Selecciona tu fecha de entrada</span></div>
+      <div class="bk-sum-dates"><span id="bkInfo">Selecciona tu fecha de entrada</span> <button type="button" class="bk-clear" id="bkClear" data-i18n="_clear">borrar</button></div>
       <div class="bk-nights" id="bkNights"></div>
     </div>
     <input type="hidden" id="entrada"><input type="hidden" id="salida">
@@ -371,7 +470,14 @@ header.scrolled .langs button{color:var(--green,#2f3d2f)}
   <div class="foot-bottom"><span>© 2026 Burruzkale Etxea · Orozko, Bizkaia</span><span>Propuesta de web · G&amp;G Elcano</span></div>
 </div></footer>
 
-<div class="lightbox" id="lightbox"><span class="close" id="lbClose">×</span><img id="lbImg" src="" alt=""></div>
+<div class="lightbox" id="lightbox">
+  <span class="close" id="lbClose">×</span>
+  <button class="lb-nav lb-prev" id="lbPrev" aria-label="Anterior">‹</button>
+  <img id="lbImg" src="" alt="">
+  <button class="lb-nav lb-next" id="lbNext" aria-label="Siguiente">›</button>
+  <div class="lb-count" id="lbCount"></div>
+</div>
+<button class="to-top" id="toTop" aria-label="Volver arriba">↑</button>
 <script src="../assets/eguzki.js"></script>
 <script>
 (function(){
